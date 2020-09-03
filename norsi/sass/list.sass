@@ -1,0 +1,16 @@
+@import 'variables'
+.list 
+  columns: 2
+  &__item 
+    display: block
+    font-family: $FontTitle
+    font-size: 28px
+    font-weight: 600
+    line-height: 36px
+    color: $text-color-dark
+    @media (min-width: 992px)
+      &:hover 
+        cursor: pointer
+        color: $active-color 
+  @media (max-width: 767px)
+    columns: 1

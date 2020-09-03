@@ -1,0 +1,307 @@
+.header
+  padding: 17px 0 
+  color: $text-color-light
+  background-color: $bg-color-dark
+  position: fixed
+  width: 100%
+  top: 0
+  z-index: 11
+  @media (max-width: 767px)
+    position: sticky
+  .content
+    display: flex
+    align-items: center
+    justify-content: space-between
+    // @media (max-width: 1500px)
+    //   padding: 0 20px
+  .logo 
+    width: 250px
+    margin-bottom: -10px 
+    @media (max-width: 1199px)
+      width: 200px
+    @media (max-width: 1040px)
+      width: 160px
+    @media (max-width: 767px)
+      display: none
+    @media (max-width: 543px)
+      width: 144px
+    &_mobile
+      display: none
+      img
+        width: 20px
+        height: 20px
+      @media (max-width: 767px)
+        display: inline-block
+        margin-bottom: -4px
+  &__phone 
+    margin-right: 40px
+    color: $text-color-light
+    font-size: 44px
+    font-weight: 700
+    @media (min-width: 992px)
+      &:hover
+        color: $active-color
+    @media (max-width: 1500px)
+      font-size: 36px
+      margin-right: 20px
+    @media (max-width: 1199px)
+      font-size: 30px
+    @media (max-width: 991px)
+      font-size: 28px
+      margin-right: 0
+  &__contacts 
+    display: flex
+    align-items: center
+    margin: -17px 0
+  &__location 
+    margin-right: 20px
+    padding: 27px 0
+    position: relative
+    display: flex
+    align-items: center
+    &-text
+      color: $text-color-light
+      font-size: 18px
+      font-weight: 400
+      text-decoration: underline
+      @media (min-width: 992px)
+        &:hover
+          color: $active-color
+    img 
+      margin-right: 8px
+      height: 25px
+    @media (max-width: 1500px)
+      &-text
+        font-size: 14px
+      img 
+        height: 20px
+    @media (max-width: 1199px)
+      &-text 
+        max-width: 70px
+      &:hover
+        .submenu_light 
+          top: 75px
+    @media (max-width: 1023px)
+      &-text 
+        max-width: none
+    @media (min-width: 992px)
+      &:hover
+        .submenu_light 
+          display: block
+          // top: 45px
+          right: 0
+          padding-bottom: 0
+          // left: 10px
+    @media (max-width: 991px)
+      display: none
+  &__lk 
+    margin-right: 21px
+    // margin-bottom: -3px
+    // padding: 10px 0
+    display: block
+    height: 20px
+    @media (max-width: 1500px)
+      margin-right: 15px
+      img
+        height: 20px
+    &-wrap 
+      padding: 27px 0
+      position: relative
+      @media (min-width: 992px)
+        &:hover
+          .submenu_light
+            display: block
+      @media (max-width: 991px)
+        padding: 0
+      .submenu_light 
+        right: 8px
+        @media (max-width: 1500px)
+          right: 0
+  &__box
+    height: 20px
+    position: relative
+    span 
+      width: 18px
+      height: 18px
+      display: block
+      position: absolute
+      top: -5px
+      right: -5px
+      color: $text-color-light
+      font-size: 11px
+      font-weight: 300
+      line-height: 18px
+      text-align: center
+      border-radius: 50%
+      background-color: $active-color
+    @media (max-width: 1500px)
+      img
+        height: 20px 
+  &_active-burger 
+    @media (max-width: 991px)
+      padding: 23px 0
+    .logo 
+      display: block
+      margin-bottom: -8px
+      @media (max-width: 767px)
+        width: 144px
+      &_mobile 
+        display: none
+    .header__phone
+      display: none
+    .menu-burger
+      position: relative
+      margin-bottom: 3px
+      span 
+        display: none
+      &::before 
+        position: absolute
+        top: 50%
+        transform: rotate(45deg)
+      &::after 
+        position: absolute
+        top: 50%
+        transform: rotate(-45deg)
+  &.submenu_active
+    z-index: 10
+
+.menu 
+  margin: 0 30px
+  display: flex
+  flex-grow: 1
+  &__item 
+    padding: 5px 0
+    display: inline-block
+    position: relative
+    &:not(:last-child)
+      margin-right: 30px
+      @media (max-width: 1500px)
+        margin-right: 20px
+      @media (max-width: 1199px)
+        margin-right: 15px
+    @media (min-width: 992px)
+      &:hover
+        .submenu 
+          display: block
+    &-link
+      color: $text-color-light
+      font-size: 20px
+      font-weight: 400
+      @media (min-width: 992px)
+        &:hover
+          cursor: pointer
+          color: $active-color
+      @media (max-width: 1500px)
+        font-size: 16px 
+  @media (max-width: 1023px)
+    display: none
+  &-burger 
+    width: 23px
+    height: 16px
+    margin-right: 20px
+    display: none
+    flex-direction: column
+    justify-content: space-between
+    span, &::before, &::after
+      width: 100%
+      height: 2px
+      display: block
+      background-color: $text-color-light
+      content: ''
+    @media (max-width: 1023px)
+      display: flex 
+.wrap_mobile 
+  display: flex
+  align-items: center
+.submenu
+  display: none
+  position: absolute
+  left: -25px
+  top: 28px
+  padding: 25px 
+  padding-bottom: 5px
+  background-color: $bg-color-dark
+  border-radius: 20px
+  z-index: 1
+  // @media (max-width: 1440px)
+    // top: 20px 
+  &__item 
+    margin-bottom: 20px
+    display: block
+    color: $text-color-light
+    font-size: 20px
+    white-space: nowrap
+    text-transform: uppercase
+    img 
+      margin-right: 10px 
+      display: block
+
+    @media (min-width: 992px)
+      &:hover
+        cursor: pointer
+        color: $active-color
+    @media (max-width: 1500px)
+      font-size: 16px
+  &_light
+    display: none
+    // margin-top: 15px
+    padding: 0 18px 16px
+    position: absolute
+    top: 65px
+    right: 0
+    // bottom: 20px
+    border-radius: 12px
+    box-shadow: 0 14px 50px rgba(182, 182, 182, 0.86)
+    background-color: #f7f7f7
+    .btn 
+      margin-top: 16px
+      height: 35px
+      width: 100%
+      line-height: 35px
+      font-size: 13px
+      font-weight: 300
+      border-width: 1px
+      &_dark-o 
+        margin-top: 8px
+    .submenu
+      &__item 
+        width: 160px
+        // padding: 10px 25px
+        display: flex
+        align-items: center
+        height: 42px
+        margin-bottom: 0
+        font-size: 13px
+        color: $text-color-dark
+        font-weight: 500
+        &:not(:last-child)
+          border-bottom: 1px solid #dcdcdc
+        @media (min-width: 992px)
+          &:hover
+            cursor: pointer
+            color: $active-color
+      &__login 
+        padding: 2px 0
+        color: $text-color-dark
+        font-size: 14px 
+        text-transform: uppercase
+        &:first-child
+          margin-right: 10px
+          padding-right: 10px
+          border-right: 2px solid $text-color-dark
+        @media (min-width: 992px)
+          &:hover 
+            cursor: pointer
+            color: $active-color
+        &-wrap 
+          padding: 10px 20px
+          display: flex
+          background-color: darken($bg-color-light, 5%)
+          border-radius: 12px 12px 0 0
+    &::after
+      content: ''
+      position: absolute
+      right: 15px
+      top: -16px
+      border: 8px solid transparent
+      border-bottom: 8px solid #f7f7f7

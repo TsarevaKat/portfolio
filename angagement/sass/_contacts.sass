@@ -1,0 +1,59 @@
+.contacts
+	min-height: calc(100vh - 120px - 196px)
+	padding: 50px 30px 200px
+	color: $text-color-light
+	font-size: 26px
+	line-height: 28px
+	background: url('../img/bg-contacts_new2.png') center no-repeat
+	background-size: cover
+	position: relative
+	&::before
+		display: none
+		width: 100%
+		height: 100%
+		background-color: #fff
+		opacity: 0.2
+		position: absolute
+		top: 0
+		left: 0
+		content: ""
+	@media (max-width: 991px)
+		padding-top: 120px
+		padding-bottom: 40px
+		background: url('../img/bg-contacts_mobile2.png') center no-repeat
+		background-size: cover
+		min-height: calc(100vh - 107px - 50px)
+	@media (max-width: 767px)
+		font-size: 12px
+		line-height: normal
+	@media (max-width: 543px)
+		padding-top: 50%
+		background-position-y: -85px
+		// background-position-y: top
+		min-height: calc(100vh - 82px - 54px)
+  &__mark 
+    position: absolute
+    top: 40%
+    left: 19%
+	&__info 
+		margin-top: 30px
+		margin-left: 35%
+		@media (max-width: 991px)
+			margin: 0
+	&__title
+		margin-bottom: 30px
+		font-family: $FontBold
+		font-size: 30px 
+		@media (max-width: 767px)
+			font-size: 12px
+			margin-bottom: 15px
+	&__text 
+		margin-bottom: 30px
+		@media (max-width: 767px)
+			margin-bottom: 15px
+	&__phone, &__email 
+		color: $text-color-light
+		font-family: $FontMedium
+		@media (min-width: 992px)
+			&:hover 
+				text-decoration: underline

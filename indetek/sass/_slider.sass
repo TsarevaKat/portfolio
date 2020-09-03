@@ -1,0 +1,190 @@
+.main
+  &-slider
+    &__wrap 
+      position: relative
+    &__arrow 
+      position: absolute
+      top: 50%
+      z-index: 10
+      width: 70px
+      height: 70px
+      transform: translateY(-50%)
+      opacity: 0.5
+      @media (min-width: 992px)
+        &:hover 
+          cursor: pointer
+          opacity: 1
+      svg 
+        fill: $text-color-light
+      &_next 
+        right: 20px
+      &_prev
+        left: 20px
+        svg 
+          transform: rotate(180deg)
+      @media (max-width: 1440px)
+        width: 50px
+        height: 50px
+        &_next 
+          right: 15px
+        &_prev 
+          left: 15px
+      @media (max-width: 991px)
+        width: 40px
+        height: 40px
+      @media (max-width: 543px)
+        width: 30px
+        height: 30px
+        &_next 
+          right: 5px
+        &_prev 
+          left: 5px
+    &.slick-dotted.slick-slider
+      margin-bottom: 0
+    &__dots 
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      margin-bottom: 25px
+      padding: 0
+      display: flex
+      justify-content: center 
+      list-style: none
+      @media (max-width: 991px) 
+        margin-bottom: 15px
+      button 
+        width: 25px
+        height: 25px 
+        margin: 0 10px
+        padding: 0
+        color: transparent
+        border-radius: 50%
+        border: 1px solid #fff
+        background-color: #fff
+        &:focus 
+          opacity: 0.5
+        @media (min-width: 992px)
+          &:hover 
+            cursor: pointer
+            opacity: 0.5
+      .slick-active
+        button 
+          background-color: transparent
+      @media (max-width: 1920px)
+        button
+          width: 20px
+          height: 20px
+      @media (max-width: 1440px)
+        button
+          width: 15px
+          height: 15px
+    &__item 
+      overflow: hidden
+      position: relative
+      display: flex !important
+      background-color: #aabbd5 
+      @media (max-width: 991px)
+        flex-direction: column
+      &::before 
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 1
+        width: 100%
+        height: 100%
+        display: block
+        background: rgb(223,224,225);
+        background: linear-gradient(90deg, rgba(223,224,225,0) 20%, rgba(170,187,213,1) 55%);
+        content: ''
+        @media (max-width: 991px)
+          background: linear-gradient(180deg, rgba(223,224,225,0) 10%, rgba(170,187,213,1) 50%);
+        @media (max-width: 543px)
+          background: linear-gradient(180deg, rgba(223,224,225,0) 5%, rgba(170,187,213,1) 35%);
+      &::after 
+        position: absolute
+        bottom: 0
+        right: -990px
+        z-index: 1
+        box-sizing: border-box
+        display: block
+        content: ''
+        border: solid #fff
+        border-width: 0 990px 70px 990px
+        border-color: transparent transparent #fff transparent
+        opacity: 0.4
+        @media (max-width: 991px)
+          right: -495px
+          border-width: 0 495px 45px 495px
+        @media (max-width: 534px)
+          right: -295px
+          border-width: 0 295px 25px 295px
+    &__img 
+      width: 60%
+      display: flex
+      img
+        width: 100%
+        height: 100%
+      @media (max-width: 991px)
+        position: relative
+        width: 100% 
+        height: 250px
+        overflow: hidden
+        img 
+          position: absolute
+          top: 50%
+          max-height: none
+          transform: translate(0, -50%)
+      @media (max-width: 543px) 
+        height: 100%  
+        img 
+          position: static
+          transform: translate(0, 0)
+    &__content 
+      z-index: 2
+      width: 40%
+      // margin: auto 0
+      padding: 0 56px
+      display: flex
+      // align-items: center
+      justify-content: center
+      flex-direction: column
+      font-size: 30px
+      line-height: 40px
+      color: $text-color-light
+      @media (max-width: 1920px)
+        padding: 0 40px 0 30px
+        font-size: 22px
+        line-height: 32px
+      @media (max-width: 1440px)
+        font-size: 18px
+        line-height: 28px
+      @media (max-width: 991px)
+        width: 100%
+        height: 250px
+        text-align: center
+        padding: 0 0 50px
+      @media (max-width: 543px)
+        height: auto 
+        padding: 0 30px 70px
+        font-size: 16px
+        line-height: 26px
+    &__title
+      font-size: 34px
+      span
+        display: block
+      @media (max-width: 1920px)
+        font-size: 28px
+      @media (max-width: 1440px)
+        font-size: 22px
+      @media (max-width: 543px)
+        font-size: 18px
+    &__link 
+      margin-top: 40px
+      display: block
+      text-decoration: none
+      color: $active-color
+      @media (max-width: 1920px)
+        margin-top: 30px
+      @media (max-width: 1440px)
+        margin-top: 20px

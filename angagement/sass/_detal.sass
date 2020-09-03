@@ -1,0 +1,385 @@
+.detal
+	&__wrap
+		max-width: 1630px
+		padding: 0 15px
+		margin: 0 auto
+	&-slider 
+		&__wrap
+			// height: 750px
+			margin-bottom: 80px
+			position: relative
+			&::before
+				height: 100%
+				width: 600px
+				display: block
+				position: absolute
+				left: 50%
+				top: 0
+				transform: translateX(-50%)
+				border-radius: 12px
+				background-color: #f6f6f6
+				content: ""
+				z-index: -1
+			@media (max-width: 767px)
+				margin-bottom: 25px
+				&::before
+					width: 300px	
+			@media (max-width: 543px)
+				&::before
+					width: 182px	
+	&__title
+		padding-top: 80px
+		margin-bottom: 80px
+		text-align: center
+		color: $active-color
+		font-family: $ProxiRegular
+		font-size: 72px
+		font-weight: 400
+		line-height: 36px
+		text-transform: uppercase
+		// z-index: 10
+		@media (max-width: 767px)
+			padding-top: 20px
+			margin-bottom: 30px
+			font-size: 24px
+	.slider
+		margin: 70px 0
+		@media (max-width: 767px)
+			margin: 40px 0
+		&-big 
+			padding-bottom: 80px
+			@media (max-width: 767px)
+				padding-bottom: 40px
+			&__item
+				// padding: 0 50px
+				display: flex !important
+				justify-content: center
+				// align-items: center
+		&-small
+			margin-bottom: 100px
+			height: 215px !important
+			@media (max-width: 1199px)
+				height: 170px !important
+			@media (max-width: 767px)
+				display: none
+			&__item
+				// width: 271px
+				height: 215px !important
+				margin: 0 14px
+				padding: 10px
+				display: flex !important
+				align-items: center
+				justify-content: center
+				border-radius: 12px
+				background-color: #f6f6f6
+				&.slick-current
+					border: 1px solid #e5e5e5
+				@media (max-width: 1199px)
+					height: 170px !important
+				&.slick-slide img
+					height: auto
+	.slider-big, .slider 
+		&__item
+			margin: 0 80px
+			@media (max-width: 767px)
+				margin: 0 40px 
+		.slick-track
+			// height: 100%
+			display: flex
+			align-items: center
+		.slick-prev, .slick-next
+			width: 48px
+			height: 81px
+			background: url('../img/arrow_big.png') center no-repeat !important
+			background-size: contain !important
+			z-index: 20
+			&::before 
+				display: none
+		.slick-prev
+			left: 80px
+		.slick-next
+			right: 80px
+			transform: translate(0, -50%) rotate(-180deg)
+		@media (max-width: 767px)
+			.slick-prev, .slick-next
+				width: 11px
+				height: 17px
+		@media (max-width: 1440px)
+			.slick-prev
+				left: 20px
+			.slick-next
+				right: 20px
+	&-info 
+		margin-bottom: 90px
+		padding: 60px 0
+		border-radius: 6px
+		background-color: #f6f6f6
+		text-align: center
+		@media (max-width: 767px)
+			margin-bottom: 40px
+			padding: 26px 0
+		&__title 
+			margin-bottom: 50px
+			color: $active-color
+			font-family: $ProxiSemibold
+			font-size: 48px
+			@media (max-width: 767px)
+				font-size: 20px
+				margin-bottom: 30px
+		&__btn	
+			width: 49%
+			padding: 30px
+			font-family: $ProxiSemibold
+			font-size: 30px
+			line-height: 36px
+			@media (max-width: 767px)
+				width: 100%
+				padding: 10px
+				margin-bottom: 21px
+				font-size: 16px
+				line-height: normal
+			&_light
+				color: $active-color
+				background-color: $bg-color-light
+				@media (min-width: 992px)
+					&:hover
+						color: $text-color-light
+						background-color: $active-color
+				@media (max-width: 767px)
+					border: 1px solid $active-color
+			&_dark 
+				color: $text-color-light
+				background-color: $active-color
+				@media (min-width: 992px)
+					&:hover
+						color: $active-color
+						background-color: $bg-color-light
+			&s 
+				display: flex
+				flex-wrap: wrap
+				justify-content: space-between
+	&__more
+		width: 284px
+		height: 40px
+		margin: 0 auto
+		display: block
+		color: $text-color-light
+		font-family: $ProxiSemibold
+		font-size: 24px
+		line-height: 40px
+		text-align: center
+		border-radius: 4px
+		border: 2px solid $active-color
+		background-color: $active-color
+		@media (min-width: 992px)
+			&:hover
+				color: $active-color
+				background-color: $bg-color-light
+		@media (max-width: 767px)
+			width: 183px
+			height: 27px
+			font-size: 14px
+			line-height: 25px
+	&__bottom
+		margin-bottom: 90px
+		@media (max-width: 767px)
+			margin-bottom: 40px
+
+.option
+	margin-bottom: 75px
+	display: flex
+	flex-wrap: wrap
+	&__wrap 
+		margin: 75px 0 100px
+		@media (max-width: 767px)
+			margin: 40px 0
+	&__img 
+		flex-basis: 40%
+		img
+			border-radius: 6px
+			display: block
+			margin: 0 auto	
+	&__content 
+		padding-left: 30px
+		flex-basis: 60%
+		color: #3d3d3d
+		font-family: $ProxiRegular
+		font-size: 24px
+		line-height: 36px
+	&__title 
+		margin-bottom: 30px
+		font-family: $ProxiBold
+	&__text 
+		text-align: justify
+	@media (max-width: 767px)
+		margin-bottom: 30px
+		&__img
+			flex-basis: 100%
+			margin-bottom: 20px	
+		&__content
+			flex-basis: 100%
+			font-size: 18px
+			line-height: 18px
+		&__title 
+			text-align: center
+			margin-bottom: 18px
+	@media (max-width: 543px)
+		&__content
+			font-size: 14px
+
+.detal 
+  .page
+    &__text 
+      p
+        text-align: justify
+
+.scheme
+	padding: 25px
+	border-radius: 12px
+	background-color: #f6f6f6 
+	text-align: center
+	.page
+    &__subtitle
+      margin-bottom: 22px
+      @media (max-width: 767px)
+        margin-bottom: 10px
+        font-size: 18px
+	&__info
+		margin-bottom: 35px
+		color: #3d3d3d
+		font-family: $ProxiLight
+		font-size: 16px
+		@media (max-width: 767px)
+			margin-bottom: 20px
+			font-size: 12px
+	&-block
+		padding: 0 40px
+		margin-bottom: 20px
+		flex-basis: 20%
+		@media (max-width: 1440px)
+			flex-basis: 25%
+		@media (max-width: 1199px)
+			padding: 20px
+		@media (max-width: 767px)
+			flex-basis: 50%
+			padding: 10px
+		&s 
+			max-height: 220px
+			height: 100%
+			overflow: hidden
+			display: flex
+			justify-content: center
+			flex-wrap: wrap 
+			transition: all 0.5s ease
+			@media (max-width: 1600px)
+				max-height: 190px
+			&.active
+				max-height: none
+				transition: all 0.5s ease
+			@media (max-width: 543px)
+				max-height: 140px
+		&__popup
+			img 
+				margin: 40px auto 40px !important
+				padding: 0 !important
+				background-color: #fff
+	&__arrow 
+		transition: all 0.5s ease
+		@media (min-width: 992px)
+			&:hover
+				cursor: pointer
+		&.active
+			transform: rotateX(180deg)
+			transition: all 0.5s ease
+
+.upholstery 
+	margin: 70px 0
+	display: flex
+	justify-content: space-around
+	&-block 
+		flex-basis: 10%
+		text-align: center
+		&__img 
+			margin-bottom: 23px
+			img 
+				margin: 0 auto
+			@media (max-width: 543px)
+				width: 80px
+				height: 80px
+				margin: 0 auto 10px
+		&__title 
+			color: #3d3d3d
+			font-family: $ProxiSemibold
+			font-size: 18px
+			line-height: 24px
+			span
+				display: block
+			@media (max-width: 767px)
+				font-size: 14px
+				line-height: 18px
+	.slick-prev, .slick-next
+		top: 40%
+		width: 25px
+		background: url('../img/arrow_dark.png') center no-repeat !important
+		background-size: contain !important
+		&::before 
+			display: none
+	.slick-prev
+		transform: translate(0, -50%) rotate(90deg)
+		@media (max-width: 543px)
+			left: 10px
+	.slick-next
+		transform: translate(0, -50%) rotate(-90deg)
+		@media (max-width: 543px)
+			right: 10px
+	@media (max-width: 991px)
+		margin: 30px
+
+.upholstery
+  &-block 
+    &__descr
+      width: 300px
+      color: $active-color
+      // background-color: $bg-color-grey
+      &-wrap
+        display: none 
+
+.catalog
+	&-card
+		padding: 20px 30px
+		width: 49%
+		position: relative
+		border-radius: 6px
+		background-color: $bg-color-grey
+		transition: all 0.5s ease
+		@media (min-width: 992px)
+			&:hover
+				cursor: pointer
+				background-color: darken($bg-color-grey, 5%)
+		@media (max-width: 767px)
+			width: 100%
+			margin-bottom: 20px
+		&__img
+			display: flex
+			align-items: center
+			justify-content: center
+		&__title 
+			position: absolute
+			left: 30px
+			bottom: 20px
+			color: $active-color
+			font-family: $Exo
+			font-size: 30px
+			font-weight: 600
+			line-height: 36px
+			@media (max-width: 767px)
+				font-size: 20px
+				left: 20px
+				bottom: 10px
+		&s 
+			margin-bottom: 40px
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			@media (max-width: 767px)
+				margin-bottom: 0

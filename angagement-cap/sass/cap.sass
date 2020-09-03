@@ -1,0 +1,220 @@
+@import "variables"
+body 
+  font-family: $FontRegular
+  color: $text-color-light
+  transition: all 1s ease
+  // overflow: hidden
+  height: 100vh
+
+a 
+  text-decoration: none
+  transition: all 1.5s ease
+
+button, input, a 
+  outline: none
+
+@import "header"
+
+.container 
+  width: 100%
+  padding-right: 15px
+  padding-left: 15px
+  margin-right: auto
+  margin-left: auto
+  @media (min-width: 576px) 
+    max-width: 540px
+  @media (min-width: 768px) 
+    max-width: 720px
+  @media (min-width: 992px) 
+    max-width: 960px
+  @media (min-width: 1200px) 
+    max-width: 1200px
+  @media (min-width: 1400px)
+    max-width: 1500px
+
+.logo
+  z-index: 11
+  @media (max-width: 1370px)
+    max-width: 250px
+
+.cap
+  &-slider
+    &__wrap
+      overflow: hidden
+      position: relative
+      height: 100%
+    &__item 
+      padding-top: 150px
+      overflow: hidden
+      height: 100vh !important
+      font-family: Ubuntu
+      font-weight: 700
+      background-size: cover
+      background-position: center bottom
+      @media (max-width: 1440px)
+        padding-top: 90px
+      @media (max-width: 991px)
+        &_shops-slide
+          padding-top: 0
+    &__next 
+      position: absolute
+      left: 50%
+      bottom: 10px
+      transform: translateX(-50%)
+      img 
+        max-width: 85px
+      &_hover
+        display: none
+      @media (min-width: 992px)
+        &:hover
+          cursor: pointer
+          .cap-slider__next_active
+            display: none
+          .cap-slider__next_hover
+            display: block
+    &__content
+      max-width: 1199px
+      padding: 30px
+      background-color: rgba(#ffffff, 0.6)
+      @media (max-width: 1440px)
+        max-width: 900px
+      @media (max-width: 991px)
+        padding: 20px
+    &__title 
+      margin-bottom: 60px
+      color: #232323
+      font-size: 50px
+      font-weight: 700
+      line-height: 72px
+      @media (max-width: 1440px)
+        margin-bottom: 40px
+        font-size: 36px
+        line-height: 45px
+      @media (max-width: 991px)
+        margin-bottom: 50px
+        font-size: 18px
+        line-height: normal
+    &__btn 
+      width: 184px
+      height: 36px
+      display: flex
+      align-items: center
+      justify-content: center
+      color: $text-color-light
+      font-family: $FontMedium
+      font-size: 14px
+      line-height: 36px
+      text-transform: uppercase
+      text-align: center
+      border-radius: 6px
+      background-color: $active-color
+      @media (max-width: 991px)
+        width: 122px
+        height: 26px
+        font-size: 10px
+        line-height: 26px
+      img
+        margin-right: 14px
+      @media (min-width: 992px)
+        &:hover
+          cursor: pointer
+          color: $active-color
+          background-color: $bg-color-light
+  &-shop
+    margin-bottom: 10px
+    width: 250px
+    color: #fefefe
+    @media (max-width: 543px)
+      width: 160px
+    @media (min-width: 992px)
+      &:hover
+        cursor: pointer
+    &s
+      height: 100%
+      position: relative
+      .slick-track
+        display: flex
+        justify-content: space-around
+        @media (max-width: 991px)
+          height: 100vh
+          align-items: center
+      .slick-slide
+        outline: none
+      
+      &__item
+        margin: 20px
+        display: flex !important
+        flex-direction: column
+        align-items: center
+      &__next
+        position: absolute
+        left: 15px
+        top: 50%
+        transform: translateY(-50%)
+        z-index: 10
+        display: none
+        @media (max-width: 991px)
+          display: block
+        &_full
+          transform: rotate(180deg)
+          display: none !important
+        &:hover
+          .cap-shops__next
+            &_o 
+              display: none !important
+            &_full 
+              display: block !important
+      &__prev
+        position: absolute
+        right: 15px
+        top: 50%
+        transform: translateY(-50%)
+        z-index: 10
+        display: none
+        @media (max-width: 991px)
+          display: block
+        &_o
+          transform: rotate(180deg)
+        &_full
+          display: none !important
+        &:hover
+          .cap-shops__prev
+            &_o 
+              display: none !important
+            &_full
+              display: block !important
+
+    &__title
+      font-family: $FontBold
+      font-size: 16px
+      text-decoration: underline
+      @media (max-width: 1440px)
+        font-size: 14px
+        line-height: normal
+    &__info 
+      max-height: 1px
+      opacity: 0
+      visibility: hidden
+      font-family: $FontRegular
+      font-size: 14px
+      line-height: 22px
+      transition: all 800ms ease
+      box-sizing: border-box
+      @media (max-width: 1440px)
+        font-size: 12px
+        line-height: 14px
+      span
+        display: block
+      a 
+        display: block
+        color: #fefefe
+        @media (min-width: 992px)
+          &:hover
+            color: $active-color
+    &.active
+      .cap-shop__info
+        max-height: 300px
+        margin: 10px
+        opacity: 1
+        visibility: visible
+        transition: all 1000ms ease

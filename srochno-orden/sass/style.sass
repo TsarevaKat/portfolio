@@ -1,0 +1,265 @@
+@import "variables"
+
+* 
+	box-sizing: border-box	
+
+body 
+	font-family: $FontRegular 
+
+a 
+	text-decoration: none
+
+input, button
+  -webkit-appearance: none
+
+.container 
+	max-width: 1286px
+	margin: 0 auto
+	padding: 0 30px 
+	@media (max-width: 767px)
+		padding: 0 20px
+
+.section
+	&__title 
+		font-family: $TitleBold
+		font-size: 72px  
+		text-align: center
+		span 
+			display: block
+		// max-width: 536px
+		&_light
+			color: $text-color-light
+		&_dark 
+			color: $text-color-dark2 
+		@media (max-width: 1600px) 
+			font-size: 48px
+		@media (max-width: 767px)
+			font-size: 22px
+			line-height: 30px
+		&_small 
+			font-size: 42px
+			color: $text-color-light
+			@media (max-width: 1600px)
+				font-size: 32px
+			@media (max-width: 767px)
+				font-size: 22px
+				line-height: 30px
+	&-block 
+		flex-basis: 33%
+		text-align: center
+		@media (max-width: 991px)
+			flex-basis: 50%
+			margin-bottom: 20px
+		@media (max-width: 767px)
+			flex-basis: 100%
+		&__img 
+			margin-bottom: 21px
+			img 
+				display: block 
+				margin: 0 auto
+		&__title 
+			margin-bottom: 17px
+			font-family: $TitleBold
+			font-size: 24px
+		&__text 
+			font-family: $FontBold
+			font-size: 18px
+		&s 
+			margin-top: 80px
+			display: flex 
+			justify-content: space-between 
+			flex-wrap: wrap
+			@media (max-width: 991px)
+				justify-content: space-around
+			@media (max-width: 767px)
+				margin-top: 40px
+	&-form
+		margin-top: -145px
+		// padding: 90px 0 150px
+		padding: 60px 0 120px
+		background: url('../img/bg-form.png') center no-repeat
+		background-size: cover 
+		background-image: linear-gradient(to right, rgba(158, 163, 16, 0.38) 0%, rgba(0, 0, 0, 0) 100%)
+		background-color: #b7bc12
+		transform: skewY(-4.7deg)
+		.container
+			transform: skewY(4.7deg)
+		.section__title 
+			font-size: 113px 
+		@media (max-width: 1600px)
+			padding-top: 40px
+			padding-bottom: 100px
+			.section__title 
+				font-size: 85px
+		@media (max-width: 767px)
+			margin-top: -31px
+			padding-top: 20px
+			padding-bottom: 40px
+			.section__title 
+				font-size: 58px
+				line-height: 66px
+
+.main
+	// padding-top: 120px
+	// padding-bottom: 240px
+	padding-top: 90px
+	padding-bottom: 200px
+	background-color: #2b3946
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%)
+	@media (max-width: 1600px)
+    padding: 35px 0 180px
+	@media (max-width: 767px)
+		padding: 35px 0 70px
+		
+.form 
+	margin-top: 70px
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	// justify-content: space-between
+	&__input 
+		outline: none
+		width: 612px
+		max-width: 50%
+		height: 99px
+		margin-right: 60px
+		padding: 0 24px
+		color: $text-color-light
+		font-family: $FontMedium
+		font-size: 48px
+		line-height: 91px
+		border-radius: 20px
+		border: 4px solid $text-color-light
+		background-color: transparent
+		&::placeholder 
+			color: $text-color-light
+	&__btn 
+		position: relative
+		// width: 326px
+		max-width: 100%
+		height: 89px
+		padding: 0 34px
+		display: flex
+		align-items: center
+		border-radius: 20px
+		background-color: $text-color-light
+		display: block 
+		font-family: $TitleBold
+		font-size: 24px
+		line-height: 89px
+		box-shadow: 0px 11px 0px 0px #dcdcdc
+		&::after 
+			display: inline-block
+			width: 16px
+			height: 28px
+			margin-bottom: -6px
+			margin-left: 25px
+			background: url('../img/arrow.png') center no-repeat
+			background-size: contain
+			content: ''
+		@media (min-width: 992px) 
+			&:hover 
+				cursor: pointer
+				background-color: darken(#fff, 5%)
+	&__smail 
+		margin-top: 50px
+		font-size: 26px
+		line-height: 36px
+		text-align: center
+		color: $text-color-light 
+		span
+			display: block
+	@media (max-width: 1600px)
+		margin-top: 40px
+		&__input
+      height: 80px
+      font-size: 44px
+      line-height: 76px
+		&__btn 
+      height: 72px
+      line-height: 76px
+		&__smail 
+      font-size: 24px
+      line-height: 30px
+	@media (max-width: 991px)
+		&__input 
+			max-width: 100%
+			margin-right: 0
+			margin-bottom: 40px	
+	@media (max-width: 767px)
+		margin-top: 20px
+		flex-direction: column
+		align-items: center
+		&__input 
+			height: 47px
+			width: 400px
+			margin-bottom: 20px
+			padding: 0 11px
+			font-size: 24px 
+			line-height: 43px
+			border-radius: 10px
+			border-width: 2px
+		&__btn 
+			height: 51px
+			padding: 0 28px
+			line-height: 51px
+			border-radius: 10px
+			font-size: 20px
+			box-shadow: 0px 8px 0px 0px #dcdcdc
+			&::after 
+				width: 12px
+				height: 20px
+				margin-bottom: -4px
+				margin-left: 21px
+		&__smail 
+			margin-top: 23px
+			font-size: 12px
+			line-height: 18px
+
+
+.why 
+	padding: 90px 0 160px
+	.section
+		&-block 
+			&__title 
+				color: $active-color
+	@media (max-width: 767px) 
+		padding-top: 30px
+		padding-bottom: 56px
+
+.footer 
+	display: flex
+	flex-direction: column
+	align-items: center
+	padding: 20px 0
+	background-color: #E4E3D9
+	border-top: 1px solid #C5C6C6
+	&-phone 
+		display: flex
+		margin-bottom: 10px
+		&__img 
+			margin-right: 10px
+	&__link 
+		font-size: 17px
+		line-height: 21px
+		text-decoration: none
+		color: #A2A707
+		@media (min-width: 992px)
+			&:hover 
+				cursor: pointer
+				text-decoration: underline 
+	&__text 
+		font-size: 14px
+		line-height: 21px
+		color: #808080
+	&-copyright 
+		text-align: center
+	&__email 
+		font-size: 14px
+		line-height: 21px
+		text-decoration: none
+		color: #A2A707
+		@media (min-width: 992px)
+			&:hover 
+				cursor: pointer
+				text-decoration: underline 

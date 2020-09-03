@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Exo+2:700|Ubuntu:700&display=swap&subset=cyrillic");
+@font-face {
+  font-family: 'GothaProReg';
+  src: url("../fonts/Gotham/GothaProReg.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'GothaProMed';
+  src: url("../fonts/Gotham/GothaProMed.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'GothaProBol';
+  src: url("../fonts/Gotham/GothaProBol.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'GothaProLig';
+  src: url("../fonts/Gotham/GothaProLig.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }

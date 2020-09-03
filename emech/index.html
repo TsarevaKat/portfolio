@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Emech</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Стили -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reset.css">
+
+  <!-- Шрифты -->
+  <link rel="stylesheet" href="css/fonts.css">
+
+  <link rel="stylesheet" href="fancybox/jquery.fancybox.min.css">
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__burger">
+      <span></span>
+    </div>
+    <!-- /.header__burger -->
+    <div class="logo">
+      <img src="img/EURO logo.svg" alt="">
+    </div>
+    <!-- /.logo -->
+    <div class="header__contacts">
+      <a href="tel:+78314686968">
+        <img src="img/call-answer.svg" alt="">
+        <span>
+          +7 (831) 468-69-68
+        </span>
+      </a>
+      <!-- <a href="tel:+78314228498">+7 (831) 422-84-98</a> -->
+    </div>
+    <!-- /.header__contacts -->
+  </header>
+  <!-- /.header -->
+
+  <div class="menu">
+    <a href="#home" class="menu__item">
+      Видео
+    </a>
+    <!-- /.menu__item -->
+    <a href="#info" class="menu__item">
+      Информация
+    </a>
+    <!-- /.menu__item -->
+    <div class="menu__item-wrap">
+      <div class="menu__item">
+        Продукция
+      </div>
+      <div class="submenu">
+        <a href="#product-1" class="submenu__item">
+          Тепло и массообменное
+        </a>
+        <a href="#product-2" class="submenu__item">
+          Фильтровальное
+        </a>
+        <a href="#product-3" class="submenu__item">
+          Сепарационное
+        </a>
+        <a href="#product-4" class="submenu__item">
+          Емкостное
+        </a>
+        <a href="#product-5" class="submenu__item">
+          технологических трубопроводов
+        </a>
+        <a href="#product-6" class="submenu__item">
+          Гранулирующее
+        </a>
+      </div>
+    </div>
+    <!-- /.menu__item -->
+    <a href="#service" class="menu__item">
+      Услуги
+    </a>
+    <!-- /.menu__item -->
+    <div class="menu__item-wrap">
+      <div class="menu__item">
+        Фотогалерея
+      </div>
+      <div class="submenu">
+        <a href="#media-1" class="submenu__item">
+          инженеринговый центр
+        </a>
+        <a href="#media-2" class="submenu__item">
+          производство
+        </a>
+        <a href="#media-3" class="submenu__item">
+          продукция
+        </a>
+        <a href="#media-4" class="submenu__item">
+          медиа
+        </a>
+      </div>
+    </div>
+    <a href="#contacts" class="menu__item">
+      Контакты
+    </a>
+    <!-- /.menu__item -->
+  </div>
+  <!-- /.menu -->
+
+  <div class="logo-main">
+    <img src="img/PMZ logo.svg" alt="">
+  </div>
+  <!-- /.logo -->
+
+  <div class="video-wrap">
+    <!-- <iframe class="video first" width="560" height="315"
+      src="https://www.youtube.com/embed/gncw6BgQMn8?
+      controls=0&showinfo=0&rel=0&autoplay=1&loop=1"
+      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe> -->
+    <video playsinline="" autoplay="autoplay" loop="loop" preload="auto" muted="muted" pip="false" poster=""
+      class="video first">
+      <source src="video/mp4/PMZ Loop 01 (10 mbps).mp4" type="video/mp4">
+      <source src="video/webm/PMZ Loop 01.webm" type="video/webm">
+    </video>
+  </div>
+  <!-- /.video-wrap -->
+
+  <a href="#fullvideo" data-fancybox class="video__btn">
+    Смотреть фильм
+  </a>
+  <!-- /.video__btn -->
+
+  <div id="info" class="page">
+    <div class="page__close"></div>
+    <!-- /.page__close -->
+    <div class="page__content">
+      <div class="page__title">
+        Презентация
+      </div>
+      <div class="page__text">
+        <p>
+          Euromehanica является одной из ведущих компаний России, предоставляющей технологические решения для
+          перерабатывающих, добывающих и энергетических отраслей промышленности.
+        </p>
+        <p>
+          Системные решения компании включают в себя проектирование, производство, комплектацию и поставку блочного
+          технологического оборудования нефте, газопереработки и химической промышленности.
+          Euromehanica является разработчиком и производителем сталеразливочного, прокатного и грузоподъемного
+          оборудования металлургии, в том числе стальковшей, водоохлаждаемых элементов, утилизаторов дымовых газов,
+          прокатных станов, охлаждающих коллекторов и клапанов высокого давления.
+        </p>
+      </div>
+      <div class="page__text">
+        <p>
+          В структуру компании входят:
+        </p>
+        <p>
+          - инжиниринговый центр (ООО «Интех»), специализирующийся на промышленном проектировании, инжиниринге
+          оборудования и НИОКР (в том числе по иностранным технологиям). Инжиниринговый центр расположен в Нижнем
+          Новгороде на базе Технопарка «Анкудиновка». специалисты центра имеют действующие разрешительные документы по
+          проектированию технологических установок, работают в системе менеджмента качества ГОСТ ISO 9001-2011 (ISO
+          9001:2008) Сертификат ST.RU.001.M0004390.
+        </p>
+        <p>
+          - производство (ООО «Павловский машиностроительный завод») в г.Павлово Нижегородской области общей площадью
+          15000 м2. Средний возраст всей инфраструктуры не превышает 10 лет. Производство работает в системе менеджмента
+          качества ISO 9001:2008, сертифицировано по системе экологического менеджмента. Сертификат ST.RU.0001.М0012021
+        </p>
+      </div>
+    </div>
+    <!-- /.page__content -->
+  </div>
+  <!-- /#info.page -->
+
+  <div id="product-1" class="page">
+    <div class="page__close"></div>
+    <!-- /.page__close -->
+    <div class="page__content">
+      <h2 class="page__title">
+        Тепло и массообменное оборудование и установки
+      </h2>
+      <!-- /.page__title -->
+      <h3 class="page__subtitle">
+        Теплообменные аппараты
+      </h3>
+      <!-- /.page__subtitle -->
+      <div class="page__text">
+        <p>
+          Подогреватели, испарители, паропреобразователи,
+          конденсаторы, холодильники, типов:
+          ТНГ, ТКГ, ХНГ, ХКГ, КНГ, ККГ, ТНВ, ТКВ, ХНВ, ХКВ, КНВ, ККВ, ИНВ, ИКВ, предназначенные
+          для газов, сжиженных газов, растворенных под давлением, и паров, предназначенные
+          для жидкостей, используемые для рабочих сред группы 1,2 с максимально допустимым
+          рабочим давлением свыше 1,0 до 16,0 МПа, изготавливаемые по ТУ 3612-003-63256887-2015
+          Сертификат ТР ТС Серия RU 0313374.
+        </p>
+        <p>
+          Теплообменные аппараты изготавливаются под брендом INEX® и имеют ряд значительных
+          отличий от традиционных теплообменников, позволяющих на порядок повысить эффективность
+          процессов. Базовые изменения коснулись конструкции аппаратов, внутренние устройства
+          выполнены в виде винтовых перегородок, создающие вихревые движения сред, профилированных
+          труб и турболизаторов, обеспечивающих в комплексе ускоренный процесс теплообмена на меньших
+          площадях теплообменных поверхностей.
+        </p>
+      </div>
+      <!-- /.page__text -->
+      <h3 class="page__subtitle">
+        Массообменное оборудование
+      </h3>
+      <!-- /.page__subtitle -->
+      <div class="page__text">
+        В том числе скрубберы, ректификационные колонны,
+        абсорберы, сушильные камеры, градирни, реакторы, внутренние устройства.
+      </div>
+      <!-- /.page__text -->
+      <a href="#" class="page__btn">
+        Посмотреть pdf
+      </a>
+      <!-- /.page__btn -->
+    </div>
+    <!-- /.page__content -->
+  </div>
+  <!-- /.page -->
+
+  <div id="product-2" class="page">
+    <div class="page__close"></div>
+    <!-- /.page__close -->
+    <div class="page__content">
+      <h2 class="page__title">
+        Фильтровальное оборудование и установки
+      </h2>
+      <!-- /.page__title -->
+      <div class="page__text">
+        <p>
+          Фильтры марки FOS® предназначены для процессов грубой, тонкой очистки жидкостей и
+          газов. Представляют из себя фильтры патронного типа с применением гофрированных
+          сеточных, мембранных и синтетических фильтроэлементов.
+          Инновационной составляющей данного продукта являются как общая конструкция фильтров,
+          так и применяемые материалы и конструктив фильтроэлементов, а также оснащение КИП и
+          промышленной автоматикой.
+        </p>
+        <p>
+          ООО «Павловский машиностроительный завод» изготавливает: Фильтры газовые типа ФГ;
+          фильтры-коалесцеры газовые типа ФКГ; фильтры-сепараторы газовые типа ФСГ;
+          коалесцеры газовые типа КГ; пылеуловители циклонного типа ПЦТ и их блоки;
+          Фильтры-влагоотделители воздушные типа ФВОВ; фильтры-влагоотделители
+          воздушные патронные типа ФВОВ-П; фильтры воздушные патронные типа ФВП и их блоки;
+          Фильтры для трубопроводов 1 и 2 категории опасности, предназначенные для очистки жидкостей
+          и газов и используемые для рабочих сред группы 1 и 2 изготавливаемые в соответствии
+          с техническими условиями ТУ 28.29.12-006-63256887-2017 Сертификат соответствия
+          ТС С-RU.АВ72.В.02344.
+        </p>
+      </div>
+      <!-- /.page__text -->
+      <a href="#" class="page__btn">
+        Посмотреть pdf
+      </a>
+      <!-- /.page__btn -->
+    </div>
+    <!-- /.page__content -->
+  </div>
+  <!-- /.page -->
+
+  <div id="product-3" class="page">
+    <div class="page__close"></div>
+    <!-- /.page__close -->
+    <div class="page__content">
+      <h2 class="page__title">
+        Сепарационное оборудование
+      </h2>
+      <!-- /.page__title -->
+      <div class="page__text">
+        <p>
+          Газосепараторы сетчатые типа ГС исполнений 1, 2; Газосепараторы циклонного типа ГСЦ;
+          газосепараторы жалюзийные типа ГСЖ исполнений I, II, III; роторные сепараторы-каплеуловители
+          типа РСКУ; сепараторы центробежные вихревые типа СЦВ; факельные сепараторы типа ФС;
+          трехфазные сепараторы типа ТФС; сепараторы нефтегазовые типа НГС исполнений I, II;
+          сепараторы нефтегазовые со сбросом воды типа НГСВ; нефтегазоводоразделители типа НГВР
+          и их блоки; Сепараторы, расширители непрерывной и периодической продувки типов СП и РП
+          изготавливаемые в соответствии с техническими условиями ТУ 28.29.12-006-63256887-2017
+          Сертификат соответствия ТС С-RU.АВ72.В.02344.
+        </p>
+      </div>
+      <!-- /.page__text -->
+      <a href="#" class="page__btn">
+        Посмотреть pdf
+      </a>
+      <!-- /.page__btn -->
+    </div>
+    <!-- /.page__content -->
+  </div>
+  <!-- /.page -->
+
+  <div id="product-4" class="page">
+    <div class="page__close"></div>
+    <!-- /.page__close -->
+    <div class="page__content">
+      <h2 class="page__title">
+        Емкостное оборудование
+      </h2>
+      <!-- /.page__title -->
+      <div class="page__text">
+        <p>
+          ООО «Павловский машиностроительный завод» изготавливает сосуды, работающие под
+          избыточным давлением, 1 и 2 категория опасности: аппараты емкостные стальные, типов
+          ГЭЭ, ВЭЭ, ВЭП, ВПП, ГКК, ГПП, ВКЭ и ВКП, вместимостью от 0,2 до 200,0 м3,
+          максимально допустимое рабочее давление от 0,05 до 16,0 МПа, предназначенные для жидкостей
+          и используемые для рабочих сред группы 1 и 2, изготавливаемые по ТУ 3615-001-63256887-2015.
+          Декларация ТР ТС N RU Д-RU.АВ72.В.02847
+        </p>
+      </div>
+      <!-- /.page__text -->
+      <a href="#" class="page__btn">
+        Посмотреть pdf
+      </a>
+      <!-- /.page__btn -->
+    </div>
+    <!-- /.page__content -->
+  </div>
+  <!-- /.page -->
+
+  <div id="product-5" class="page">
+    <div class="page__close"></div>
+    <!-- /.page__close -->
+    <div class="page__content">
+      <h2 class="page__title">
+        Оборудование технологических трубопроводов
+      </h2>
+      <!-- /.page__title -->
+      <h3 class="page__subtitle">
+        Узел опорный низкого трения ISAB®
+      </h3>
+      <!-- /.page__subtitle -->
+      <div class="page__text">
+        <p>
+          Предназначен для трубопроводов транспортирующих различные среды, в том числе
+          агрессивные, в пределах промышленного предприятия или их групп.
+          Главная задача ISAB® – снятие действующего на трубы силового воздействия,
+          и передача нагрузки несущей конструкции. Данная скользящая антифрикционная опора
+          позволяет компенсировать продольные и поперечные перемещения, вызванные внешними
+          нагрузками, предотвращая, тем самым, деформацию технологического трубопровода.
+          С учетом достигнутого низкого коэффициента трения (не более 0,6) и возможности ISAB®
+          выдерживать большие температуры до 700°С (в то время как большинство аналогов выдерживают
+          только до 400°С) ее применение позволяет продлить срок эксплуатации трубопровода и ТПА.
+        </p>
+      </div>
+      <!-- /.page__text -->
+      <h3 class="page__subtitle">
+        Клапан высокого давления INOVA® </h3>
+      <!-- /.page__subtitle -->
+      <div class="page__text">
+        Предназначен для технологических трубопроводов
+        установок высокого давления, в том числе насосов
+        высокого давления, парогенераторов, утилизаторов. Рабочее давление до 63МПа, возможно
+        применение для агрессивных сред, острого пара.
+      </div>
+      <!-- /.page__text -->
+      <a href="#" class="page__btn">
+        Посмотреть pdf
+      </a>
+      <!-- /.page__btn -->
+    </div>
+    <!-- /.page__content -->
+  </div>
+  <!-- /.page -->
+
+  <div id="product-6" class="page">
+    <div class="page__close"></div>
+    <!-- /.page__close -->
+    <div class="page__content">
+      <h2 class="page__title">
+        Гранулирующее оборудование и установки </h2>
+      <!-- /.page__title -->
+      <div class="page__text">
+        <p>
+          Компания Euromechanica является разработчиком и производителем гранулирующего
+          оборудования марки GRANMIX®, предназначенного для влажной, сухой и структурной
+          грануляции. ООО «ПМЗ» выпускает следующие типы грануляторов серийно:
+        </p>
+        <p>
+          - Окатыватели дисковые. Предназначены для получения в непрерывном или периодическом
+          режимах сферических гранул из сформированных пластинчатых цилиндрических гранул таблеток.
+        </p>
+        <p>
+          - Грануляторы формования шнековые. Предназначены для получения в непрерывном режиме
+          гранул из пастообразных материалов.
+        </p>
+        <p>
+          - Грануляторы формования прессующие. Предназначены для переработки различных влажных
+          и пастообразных материалов в гранулы правильной и разноразмерной формы в виде таблеток
+          и колец.
+        </p>
+        <p>
+          - Смеситель-гранулятор турболопастной периодического действия. Предназначен для получения
+          гомогенных смесей и гранулированных продуктов с повышенным требованием к
+          гранулометрическому составу, форме, плотности.
+        </p>
+        <p>
+          - Гранулятор фильерный. Предназначен для получения гранул из пастообразных продуктов
+          влажностью 40-60%.
+        </p>
+        <p>
+          - Гранулятор тарельчатый. Предназначены для получения гранул из порошкообразных материалов
+          с добавлением жидкофазного связующего.
+        </p>
+        <p>
+          - Гранулятор сульфата аммония барабанного типа.
+        </p>
+      </div>
+      <!-- /.page__text -->
+      <div class="page__text">
+        Вспомогательным оборудованием проектируемым и производимым ООО «ПМЗ» являются
+        компоненты гранулирующих установок, такие как смесители, питатели шлюзовые, транспортеры,
+        классификаторы, сгустители и другое технологического оборудование.
+      </div>
+      <a href="#" class="page__btn">
+        Посмотреть pdf
+      </a>
+      <!-- /.page__btn -->
+    </div>
+    <!-- /.page__content -->
+  </div>
+  <!-- /.page -->
+
+  <div id="media-1" class="page">
+    <div class="page__close"></div>
+    <!-- /.page__close -->
+    <div class="page__content">
+      <div class="media">
+        <a href="#video1" data-fancybox class="media__item">
+          <video loop="loop" preload="auto" muted="muted" poster="img/2019-12-04_07-03-17.png">
+            <source src="video/mp4/PMZ Loop 02 (10 mbps).mp4" type="video/mp4">
+            <source src="video/webm/PMZ Loop 02.webm" type="video/webm">
+          </video>
+          <div class="media__play">
+            <img src="img/play.png" alt="">
+          </div>
+          <!-- /.media__play -->
+        </a>
+        <a href="#video2" data-fancybox class="media__item">
+          <video loop="loop" preload="auto" muted="muted" poster="img/2019-12-04_07-03-17.png">
+            <source src="video/mp4/PMZ Loop 03 (10 mbps).mp4" type="video/mp4">
+            <source src="video/webm/PMZ Loop 03.webm" type="video/webm">
+          </video>
+          <div class="media__play">
+            <img src="img/play.png" alt="">
+          </div>
+          <!-- /.media__play -->
+        </a>
+        <a href="#video3" data-fancybox class="media__item">
+          <video loop="loop" preload="auto" muted="muted" poster="img/2019-12-04_07-03-17.png">
+            <source src="video/mp4/PMZ Loop 01 (10 mbps).mp4" type="video/mp4">
+            <source src="video/webm/PMZ Loop 01.webm" type="video/webm">
+          </video>
+          <div class="media__play">
+            <img src="img/play.png" alt="">
+          </div>
+          <!-- /.media__play -->
+        </a>
+        <a href="#video4" data-fancybox class="media__item">
+          <video loop="loop" preload="auto" muted="muted" poster="img/2019-12-04_07-03-17.png">
+            <source src="video/mp4/PMZ Loop 03 (10 mbps).mp4" type="video/mp4">
+            <source src="video/webm/PMZ Loop 03.webm" type="video/webm">
+          </video>
+          <div class="media__play">
+            <img src="img/play.png" alt="">
+          </div>
+          <!-- /.media__play -->
+        </a>
+        <a href="#video5" data-fancybox class="media__item">
+          <video loop="loop" preload="auto" muted="muted" poster="img/2019-12-04_07-03-17.png">
+            <source src="video/mp4/PMZ Loop 02 (10 mbps).mp4" type="video/mp4">
+            <source src="video/webm/PMZ Loop 02.webm" type="video/webm">
+          </video>
+          <div class="media__play">
+            <img src="img/play.png" alt="">
+          </div>
+          <!-- /.media__play -->
+        </a>
+        <a href="#video6" data-fancybox class="media__item">
+          <video loop="loop" preload="auto" muted="muted" poster="img/2019-12-04_07-03-17.png">
+            <source src="video/mp4/PMZ Loop 01 (10 mbps).mp4" type="video/mp4">
+            <source src="video/webm/PMZ Loop 01.webm" type="video/webm">
+          </video>
+          <div class="media__play">
+            <img src="img/play.png" alt="">
+          </div>
+          <!-- /.media__play -->
+        </a>
+      </div>
+      <!-- /.media -->
+    </div>
+    <!-- /.page__content -->
+  </div>
+  <!-- /#media-1.page -->
+
+  <div id="media-2" class="page">
+    <div class="page__close"></div>
+    <!-- /.page__close -->
+    <div class="page__content">
+      <div class="media">
+        <a href="#video2" data-fancybox class="media__item">
+          <video loop="loop" preload="auto" muted="muted" poster="img/2019-12-04_07-03-17.png">
+            <source src="video/mp4/PMZ Loop 03 (10 mbps).mp4" type="video/mp4">
+            <source src="video/webm/PMZ Loop 03.webm" type="video/webm">
+          </video>
+          <div class="media__play">
+            <img src="img/play.png" alt="">
+          </div>
+          <!-- /.media__play -->
+        </a>
+        <a href="#video3" data-fancybox class="media__item">
+          <video loop="loop" preload="auto" muted="muted" poster="img/2019-12-04_07-03-17.png">
+            <source src="video/mp4/PMZ Loop 01 (10 mbps).mp4" type="video/mp4">
+            <source src="video/webm/PMZ Loop 01.webm" type="video/webm">
+          </video>
+          <div class="media__play">
+            <img src="img/play.png" alt="">
+          </div>
+          <!-- /.media__play -->
+        </a>
+        <a href="#video5" data-fancybox class="media__item">
+          <video loop="loop" preload="auto" muted="muted" poster="img/2019-12-04_07-03-17.png">
+            <source src="video/mp4/PMZ Loop 02 (10 mbps).mp4" type="video/mp4">
+            <source src="video/webm/PMZ Loop 02.webm" type="video/webm">
+          </video>
+          <div class="media__play">
+            <img src="img/play.png" alt="">
+          </div>
+          <!-- /.media__play -->
+        </a>
+        <a href="#video6" data-fancybox class="media__item">
+          <video loop="loop" preload="auto" muted="muted" poster="img/2019-12-04_07-03-17.png">
+            <source src="video/mp4/PMZ Loop 01 (10 mbps).mp4" type="video/mp4">
+            <source src="video/webm/PMZ Loop 01.webm" type="video/webm">
+          </video>
+          <div class="media__play">
+            <img src="img/play.png" alt="">
+          </div>
+          <!-- /.media__play -->
+        </a>
+      </div>
+      <!-- /.media -->
+    </div>
+    <!-- /.page__content -->
+  </div>
+  <!-- /#media-1.page -->
+
+  <div id="media-3" class="page">
+    <div class="page__close"></div>
+    <!-- /.page__close -->
+    <div class="page__content">
+      <div class="media media_img">
+        <a href="img/product/IMG_0198.JPG" data-fancybox='group1' class="media__item">
+          <img src="img/product/IMG_0198.JPG" alt="">
+        </a>
+
+        <a href="img/product/IMG_0199.JPG" data-fancybox='group1' class="media__item">
+          <img src="img/product/IMG_0199.JPG" alt="">
+        </a>
+
+        <a href="img/product/IMG_0200.JPG" data-fancybox='group1' class="media__item">
+          <img src="img/product/IMG_0200.JPG" alt="">
+        </a>
+
+        <a href="img/product/IMG_0201.JPG" data-fancybox='group1' class="media__item">
+          <img src="img/product/IMG_0201.JPG" alt="">
+        </a>
+
+        <a href="img/product/IMG_0208.JPG" data-fancybox='group1' class="media__item">
+          <img src="img/product/IMG_0208.JPG" alt="">
+        </a>
+
+        <a href="img/product/IMG_0209.JPG" data-fancybox='group1' class="media__item">
+          <img src="img/product/IMG_0209.JPG" alt="">
+        </a>
+
+        <a href="img/product/IMG_0210.JPG" data-fancybox='group1' class="media__item">
+          <img src="img/product/IMG_0210.JPG" alt="">
+        </a>
+
+        <a href="img/product/IMG_0211.JPG" data-fancybox='group1' class="media__item">
+          <img src="img/product/IMG_0211.JPG" alt="">
+        </a>
+
+        <a href="img/product/IMG_0212.JPG" data-fancybox='group1' class="media__item">
+          <img src="img/product/IMG_0212.JPG" alt="">
+        </a>
+
+        <a href="img/product/IMG_0213.JPG" data-fancybox='group1' class="media__item">
+          <img src="img/product/IMG_0213.JPG" alt="">
+        </a>
+
+        <a href="img/product/IMG_0214.JPG" data-fancybox='group1' class="media__item">
+          <img src="img/product/IMG_0214.JPG" alt="">
+        </a>
+
+        <a href="img/product/IMG_0215.JPG" data-fancybox='group1' class="media__item">
+          <img src="img/product/IMG_0215.JPG" alt="">
+        </a>
+
+        <a href="img/product/IMG_0216.JPG" data-fancybox='group1' class="media__item">
+          <img src="img/product/IMG_0216.JPG" alt="">
+        </a>
+      </div>
+      <!-- /.media -->
+    </div>
+    <!-- /.page__content -->
+  </div>
+  <!-- /#media-1.page -->
+
+  <div id="media-4" class="page">
+    <div class="page__close"></div>
+    <!-- /.page__close -->
+    <div class="page__content">
+      <div class="media">
+        <a href="#video3" data-fancybox class="media__item">
+          <video loop="loop" preload="auto" muted="muted" poster="img/2019-12-04_07-03-17.png">
+            <source src="video/mp4/PMZ Loop 01 (10 mbps).mp4" type="video/mp4">
+            <source src="video/webm/PMZ Loop 01.webm" type="video/webm">
+          </video>
+          <div class="media__play">
+            <img src="img/play.png" alt="">
+          </div>
+          <!-- /.media__play -->
+        </a>
+        <a href="#video2" data-fancybox class="media__item">
+          <video loop="loop" preload="auto" muted="muted" poster="img/2019-12-04_07-03-17.png">
+            <source src="video/mp4/PMZ Loop 03 (10 mbps).mp4" type="video/mp4">
+            <source src="video/webm/PMZ Loop 03.webm" type="video/webm">
+          </video>
+          <div class="media__play">
+            <img src="img/play.png" alt="">
+          </div>
+          <!-- /.media__play -->
+        </a>
+        <a href="#video5" data-fancybox class="media__item">
+          <video loop="loop" preload="auto" muted="muted" poster="img/2019-12-04_07-03-17.png">
+            <source src="video/mp4/PMZ Loop 02 (10 mbps).mp4" type="video/mp4">
+            <source src="video/webm/PMZ Loop 02.webm" type="video/webm">
+          </video>
+          <div class="media__play">
+            <img src="img/play.png" alt="">
+          </div>
+          <!-- /.media__play -->
+        </a>
+        <a href="#video3" data-fancybox class="media__item">
+          <video loop="loop" preload="auto" muted="muted" poster="img/2019-12-04_07-03-17.png">
+            <source src="video/mp4/PMZ Loop 01 (10 mbps).mp4" type="video/mp4">
+            <source src="video/webm/PMZ Loop 01.webm" type="video/webm">
+          </video>
+          <div class="media__play">
+            <img src="img/play.png" alt="">
+          </div>
+          <!-- /.media__play -->
+        </a>
+        <a href="#video6" data-fancybox class="media__item">
+          <video loop="loop" preload="auto" muted="muted" poster="img/2019-12-04_07-03-17.png">
+            <source src="video/mp4/PMZ Loop 01 (10 mbps).mp4" type="video/mp4">
+            <source src="video/webm/PMZ Loop 01.webm" type="video/webm">
+          </video>
+          <div class="media__play">
+            <img src="img/play.png" alt="">
+          </div>
+          <!-- /.media__play -->
+        </a>
+      </div>
+      <!-- /.media -->
+    </div>
+    <!-- /.page__content -->
+  </div>
+  <!-- /#media-1.page -->
+
+  <div id="service" class="page">
+    <div class="page__close"></div>
+    <!-- /.page__close -->
+    <div class="page__content">
+      <div class="page__title">
+        Услуги
+      </div>
+      <!-- /.page__title -->
+      <div class="page__text">
+        <p>
+          ООО «Павловский машиностроительный завод» оказывает услуги механической обработки
+          металлоизделий из различных марок сталей, сортового проката и поковок:
+        </p>
+        <p>
+          - Токарная обработка деталей диаметром до 1600 мм и длиной до 5000 мм
+          (ДИП 300, ДИП 500, токарно-карусельные станки)
+        </p>
+        <p>
+          - Фрезерная обработка деталей1600*2000 мм (ЧПУ, универсальные станки)
+        </p>
+        <p>
+          - Расточка, сверловка, гибка, резка, шлифовка заготовок.
+        </p>
+        <p>
+          - Гибка листового металла до 36 мм
+        </p>
+        <p>
+          - Сварка обечаек на сварочном стенде с роликовыми вращателями,
+          диаметр свариваемых обечаек 3,2 м, длина до 20 м
+        </p>
+        <p>
+          - Плазменная резка металла толщиной до 100 мм
+        </p>
+        <p>
+          - Сварка металлических листов и труб полуавтоматическая и машинная (Wallius, Lincoln, TIG, ТС АДФ 1000)
+        </p>
+        <p>
+          - Развальцовка труб (ВМ-200)
+        </p>
+        <p>
+          - Изготовление металлоконструкций цеховой грузоподъемность до 40 тонн, внецеховой до 80 тонн
+        </p>
+        <p>
+          - Услуги лаборатории неразрушающего контроля
+        </p>
+      </div>
+      <!-- /.page__text -->
+    </div>
+    <!-- /.page__content -->
+  </div>
+  <!-- /#service.page -->
+
+  <div id="contacts" class="page">
+    <div class="page__close"></div>
+    <!-- /.page__close -->
+    <div class="page__content">
+      <div class="contacts">
+        <div class="contacts__info">
+          <p>
+
+            Офис (Инжиниринговый центр) ООО Павловский машиностроительный завод
+          </p>
+          <p>
+            г. Нижний Новгород, ул.Ларина д. 22, литера Д, бизнес центр технопарка Анкудиновка.
+          </p>
+          <p>
+            Тел.: <a href="tel:+78314686968">+7 (831) 468-69-68</a>
+          </p>
+          <p>
+            Тел.: <a href="tel:+78314228498">+7 (831) 422-84-98</a>
+          </p>
+        </div>
+        <!-- /.contats__info -->
+        <div class="contacts__map">
+          <iframe src="https://yandex.ru/map-widget/v1/-/CGddEXKP" width="560" height="400" frameborder="1"
+            allowfullscreen="true"></iframe>
+        </div>
+        <!-- /.contacts__map -->
+      </div>
+      <!-- /.contacts -->
+      <div class="contacts">
+        <div class="contacts__info">
+          <p>
+            Производственная площадка г. Павлово
+          </p>
+          <p>
+            г. Павлово, Аллея Ильича, д. 43
+          </p>
+          <p>
+            Тел.: <a href="tel:+78317157209">+7 (83171) 5-72-09</a>
+          </p>
+          <p class="attention">
+            Внимание!
+          </p>
+          <p>
+            Для оформления пропуска на производство необходимо отправить письмо на фирменном бланке по телефону:
+          </p>
+          <p>
+            <a href="tel:+78314686968">+7 (831) 468-69-68</a>
+          </p>
+        </div>
+        <!-- /.contats__info -->
+        <div class="contacts__map">
+          <iframe src="https://yandex.ru/map-widget/v1/-/CGddE2od" width="560" height="400" frameborder="1"
+            allowfullscreen="true"></iframe>
+        </div>
+        <!-- /.contacts__map -->
+      </div>
+      <!-- /.contacts -->
+    </div>
+    <!-- /.page__content -->
+  </div>
+  <!-- /#contacts.page -->
+
+
+  <!-- Видео -->
+  <video id="fullvideo" controls style="display:none;">
+    <source src="video/mp4/PMZ (10 mbps).mp4" type="video/mp4">
+    <source src="video/webm/PMZ (subtitles).webm" type="video/webm">
+  </video>
+  <video id="video1" controls style="display:none;">
+    <source src="video/mp4/PMZ Loop 02 (10 mbps).mp4" type="video/mp4">
+    <source src="video/webm/PMZ Loop 02.webm" type="video/webm">
+  </video>
+  <video id="video2" controls style="display:none;">
+    <source src="video/mp4/PMZ Loop 03 (10 mbps).mp4" type="video/mp4">
+    <source src="video/webm/PMZ Loop 03.webm" type="video/webm">
+  </video>
+  <video id="video3" controls style="display:none;">
+    <source src="video/mp4/PMZ Loop 01 (10 mbps).mp4" type="video/mp4">
+    <source src="video/webm/PMZ Loop 01.webm" type="video/webm">
+  </video>
+  <video id="video4" controls style="display:none;">
+    <source src="video/mp4/PMZ Loop 03 (10 mbps).mp4" type="video/mp4">
+    <source src="video/webm/PMZ Loop 03.webm" type="video/webm">
+  </video>
+  <video id="video5" controls style="display:none;">
+    <source src="video/mp4/PMZ Loop 02 (10 mbps).mp4" type="video/mp4">
+    <source src="video/webm/PMZ Loop 02.webm" type="video/webm">
+  </video>
+  <video id="video6" controls style="display:none;">
+    <source src="video/mp4/PMZ Loop 01 (10 mbps).mp4" type="video/mp4">
+    <source src="video/webm/PMZ Loop 01.webm" type="video/webm">
+  </video>
+
+
+  <div class="burger-menu">
+    <a href="#home" class="burger-menu__item">
+      Видео
+    </a>
+    <!-- /.menu__item -->
+    <a href="#info" class="burger-menu__item">
+      Информация
+    </a>
+    <!-- /.menu__item -->
+    <div class="burger-menu__item-wrap">
+      <div class="burger-menu__item">
+        Продукция
+        <img src="img/arrow.svg" alt="">
+      </div>
+      <div class="burger-submenu">
+        <a href="#product-1" class="burger-submenu__item">
+          Тепло и массообменное
+        </a>
+        <a href="#product-2" class="burger-submenu__item">
+          Фильтровальное
+        </a>
+        <a href="#product-3" class="burger-submenu__item">
+          Сепарационное
+        </a>
+        <a href="#product-4" class="burger-submenu__item">
+          Емкостное
+        </a>
+        <a href="#product-5" class="burger-submenu__item">
+          технологических трубопроводов
+        </a>
+        <a href="#product-6" class="burger-submenu__item">
+          Гранулирующее
+        </a>
+      </div>
+    </div>
+    <!-- /.menu__item -->
+    <a href="#service" class="burger-menu__item">
+      Услуги
+    </a>
+    <!-- /.menu__item -->
+    <div class="burger-menu__item-wrap">
+      <div class="burger-menu__item">
+        Фотогалерея
+        <img src="img/arrow.svg" alt="">
+      </div>
+      <div class="burger-submenu">
+        <a href="#media-1" class="burger-submenu__item">
+          инженеринговый центр
+        </a>
+        <a href="#media-2" class="burger-submenu__item">
+          производство
+        </a>
+        <a href="#media-3" class="burger-submenu__item">
+          продукция
+        </a>
+        <a href="#media-4" class="burger-submenu__item">
+          медиа
+        </a>
+      </div>
+    </div>
+    <a href="#contacts" class="burger-menu__item">
+      Контакты
+    </a>
+    <!-- /.menu__item -->
+  </div>
+  <!-- /.menu -->
+
+  <!-- Подключение JQ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="fancybox/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

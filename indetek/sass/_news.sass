@@ -1,0 +1,120 @@
+.news 
+  width: 100%
+  padding: 60px 35px 40px
+  display: flex
+  flex-wrap: wrap
+  @media (max-width: 1440px)
+    padding: 40px 20px 20px
+  @media (max-width: 767px)
+    padding: 30px 15px 10px
+  &-block 
+    width: 50%
+    @media (max-width: 767px)
+      width: 100%
+  &__item
+    position: relative
+    margin: 0 15px 30px
+    display: block
+    font-size: 26px
+    font-weight: 600
+    color: $text-color-light
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    overflow: hidden
+    @media (max-width: 1440px)
+      margin: 0 10px 20px
+      font-size: 20px
+    @media (max-width: 767px)
+      margin: 0 0 15px
+    @media (max-width: 543px)
+      font-size: 18px
+    &_big 
+      width: calc(100% - 30px)
+      height: 690px
+      @media (max-width: 1699px)
+        height: 590px
+      @media (max-width: 1440px)
+        width: calc(100% - 20px)
+        height: 450px
+      @media (max-width: 1199px)
+        height: 350px
+      @media (max-width: 767px)
+        width: 100%
+    &_mid
+      width: calc(100% - 30px)
+      height: 400px
+      @media (max-width: 1699px) 
+        height: 300px
+      @media (max-width: 1440px)
+        width: calc(100% - 20px)
+        height: 200px 
+      @media (max-width: 1199px)
+        height: 150px
+      @media (max-width: 767px)
+        width: 100%
+    &_h
+      width: calc(50% - 30px)
+      height: 1120px  
+      // float: left
+      @media (max-width: 1699px)
+        height: 920px
+      @media (max-width: 1440px)
+        width: calc(50% - 20px)
+        height: 670px
+      @media (max-width: 1199px)
+        height: 520px
+      @media (max-width: 767px)
+        width: 100%
+    &_small
+      width: calc(25% - 30px)
+      height: 300px
+      @media (max-width: 1699px)
+        height: 250px
+      @media (max-width: 1440px)
+        height: 230px
+        width: calc(25% - 20px)
+      @media (max-width: 1199px)
+        height: 180px 
+      @media (max-width: 1024px)
+        width: calc(50% - 20px)
+      @media (max-width: 767px)
+        width: 100%
+    &::after 
+      position: absolute
+      top: 100%
+      left: 0
+      width: 100%
+      height: 100%
+      display: block
+      content: ''
+      background-color: rgba(#000, 0.4)
+      transition: top 0.8s
+    @media (min-width: 992px)
+      &:hover 
+        // color: $active-color
+        &::after 
+          top: 0
+  &__link 
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
+    padding: 15px 20px
+    display: flex
+    align-items: center
+    svg 
+      width: 14px
+      height: 25px 
+      margin-left: 10px
+      fill: $text-color-light 
+  &__text 
+    position: absolute
+    bottom: 0
+    right: 0
+    z-index: 1
+    padding: 15px 20px
+    text-align: right 
+    p 
+      margin: 0
+    

@@ -1,0 +1,139 @@
+.map
+	width: calc(100% - 355px)
+	height: 100%
+	background: $bg-color-dark 
+	// background-image: url('../img/map.jpg')
+	@media (max-width: 543px)
+		display: none
+	&__wrap
+		display: flex
+		height: calc(100vh - 162px)
+		@media (max-width: 543px)
+			height: calc(100vh - 140px)
+	&-menu 
+		width: 355px
+		padding: 30px 0
+		overflow-y: auto
+		background-color: #eee
+		@media (max-width: 543px)
+			width: 100%
+		&__item 
+			width: 284px
+			color: $active-color
+			margin-bottom: 5px
+			@media (max-width: 543px)
+				width: 100%
+			@media (min-width: 992px)
+				&:hover
+					.map-menu__title 
+						cursor: pointer
+						text-decoration: underline
+			&.active
+				.map-menu
+					&__title
+						color: $active-color
+					&__descr
+						margin: 0 30px 10px
+						// display: block
+						max-height: 300px
+						opacity: 1
+						visibility: visible
+						color: $active-color
+						transition: all 1s ease
+					// &__btn
+					// 	display: block
+						@media (max-width: 543px)
+							display: none
+					&__img 
+						@media (max-width: 543px)
+							display: block
+		&__title 
+			margin: 0 30px
+			font-family: $FontBold
+			font-size: 18px
+			line-height: 30px
+			@media (max-width: 991px)
+				font-size: 16px
+			@media (max-width: 543px)
+				font-size: 14px
+		&__descr 
+			max-height: 0
+			opacity: 0
+			visibility: hidden
+			transition: all 1s ease
+			// display: none
+			// color: #5a5a5a
+			font-size: 14px
+			line-height: 24px
+			// font-family: $FontLight
+			@media (max-width: 991px)
+				font-size: 11px
+				line-height: 20px
+			@media (max-width: 543px)
+				margin-top: 0
+				font-size: 12px
+				line-height: 24px
+			span
+				font-family: $FontMedium
+			a 
+				color: $active-color
+		// &__btn
+		// 	margin: 20px 30px
+		// 	height: 30px
+		// 	display: none
+		// 	color: $text-color-light
+		// 	font-family: $FontBold
+		// 	font-size: 14px
+		// 	line-height: 30px
+		// 	background-color: $active-color
+		// 	text-align: center
+		// 	@media (min-width: 992px)
+		// 		&:hover
+		// 			cursor: pointer
+		// 			color: $active-color
+		// 			background-color: #ffffff
+		&__img 
+			display: none
+			width: 100vw
+			img
+				width: 100%
+	&_pnone, &_worktime
+		position: relative
+		padding-left: 20px 
+		line-height: 24px
+		img
+			position: absolute
+			top: 5px
+			left: 0
+.balloon
+	&__header
+		width: 178px
+		margin-bottom: 18px
+		color: #5a5a5a
+		font-family: $FontBold
+		font-size: 11px
+		line-height: 12px
+		text-transform: uppercase
+	&__body
+		width: 178px
+		margin-bottom: 15px
+		color: #5a5a5a
+		font-family: $FontLight
+		font-size: 11px
+		line-height: 12px
+		span 
+			font-family: $FontBold
+	&__footer
+		width: 178px
+		font-family: $FontLight
+		font-size: 11px
+		line-height: 12px
+		a
+			color: #5a5a5a
+      
+[class*="ymaps-2"][class*="-balloon__layout"]
+	border-radius: 4px
+[class*="ymaps-2"][class*="-ground-pane"]
+  filter: grayscale(100%) invert(120%) contrast(0.7) brightness(2) saturate(0.75)
+  // filter: sepia(1) invert(100%) contrast(0.9) brightness(3) saturate(0.75)
+  // filter: sepia(1) invert(100%) contrast(0.9) brightness(4) saturate(0.45)

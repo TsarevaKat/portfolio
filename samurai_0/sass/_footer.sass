@@ -1,0 +1,223 @@
+.footer 
+  padding: 60px 0 20px
+  color: $text-color-light
+  background-color: $bg-color-dark
+  @media (max-width: 1023px)
+    padding-top: 20px
+  .content
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  &__left
+    // flex-basis: 18%
+    // @media (max-width: 1199px)
+      // flex-basis: 15%
+    @media (max-width: 1023px)
+      margin-bottom: 15px
+      flex-basis: 100%
+      display: flex
+      align-items: center
+      justify-content: space-between
+      flex-wrap: wrap
+    @media (max-width: 767px)
+      margin-bottom: 0
+    @media (max-width: 630px)
+      margin-bottom: 0
+      flex-direction: column
+  &-menu 
+    display: flex
+    justify-content: space-between
+    // justify-content: center
+    flex-basis: 60%
+    padding: 0 15px
+    // margin: 0 10px
+    @media (max-width: 1023px)
+      display: none
+    &__block
+      flex-basis: 25%
+      // margin: 0 20px
+      padding: 0 5px
+      // @media (max-width: 1440px)
+    &__title
+      margin-bottom: 20px
+      font-size: 24px
+      font-weight: 700
+      text-transform: uppercase
+      white-space: nowrap
+      @media (max-width: 1440px)
+        font-size: 20px
+      @media (max-width: 1199px)
+        font-size: 18px
+    &__item 
+      margin-bottom: 20px
+      display: block
+      color: $text-color-light
+      font-family: Ubuntu
+      font-size: 16px
+      font-weight: 400
+      text-transform: uppercase
+      @media (min-width: 992px)
+        &:hover 
+          cursor: pointer
+          color: $active-color
+      @media (max-width: 1440px)
+        font-size: 16px
+        margin-bottom: 18px
+      @media (max-width: 1199px)
+        font-size: 14px
+        margin-bottom: 15px
+  &__right 
+    flex-basis: 18%
+    text-align: center
+    @media (max-width: 1199px)
+      flex-basis: 15%
+    @media (max-width: 1023px)
+      flex-basis: 100%
+      display: flex
+      align-items: center
+      justify-content: space-between
+    @media (max-width: 767px)
+      display: none
+  &__phone
+    // margin-top: 40px
+    margin-top: 30px
+    margin-bottom: 25px
+    display: block
+    color: $text-color-light
+    // font-size: 64px
+    font-size: 53px
+    font-weight: 700
+    text-align: center
+    white-space: nowrap
+    @media (min-width: 992px)
+      &:hover
+        cursor: pointer
+        color: $active-color
+    // @media (max-width: 1440px)
+    //   margin-top: 30px
+    //   font-size: 50px
+    @media (max-width: 1199px)
+      margin-top: 20px
+      margin-bottom: 15px
+      font-size: 40px
+    @media (max-width: 1040px)
+      margin-top: 15px
+      margin-bottom: 10px
+      font-size: 35px
+  &__text 
+    // font-size: 30px
+    font-size: 24px
+    font-weight: 400
+    text-transform: uppercase
+    text-align: center
+    span
+      display: block
+      white-space: nowrap
+    @media (max-width: 1199px)
+      font-size: 18px
+    @media (max-width: 1040px)
+      font-size: 17px
+  &__btn 
+    width: 100%
+    // height: 60px
+    margin-bottom: 20px
+    padding: 15px
+    display: block
+    color: $text-color-light
+    font-family: Ubuntu
+    font-size: 20px
+    font-weight: 500
+    text-transform: uppercase
+    text-align: center
+    border-radius: 30px
+    border: 4px solid #ffffff
+    white-space: nowrap
+    @media (min-width: 992px)
+      &:hover
+        color: $active-color
+        border-color: $active-color
+    @media (max-width: 1440px)
+      // width: 200px
+      font-size: 14px
+    @media (max-width: 1199px)
+      padding: 10px
+      margin-bottom: 15px
+    @media (max-width: 1023px)
+      width: 30%
+      margin-bottom: 0
+  &-info 
+    margin-top: 20px
+    flex-basis: 100%
+    font-family: Ubuntu
+    // font-size: 18px
+    font-size: 14px
+    font-weight: 300
+    // line-height: 16px
+    @media (max-width: 543px)
+      text-align: center
+    &__copy 
+      // margin-bottom: 10px
+      margin-bottom: 5px
+      display: block
+      font-size: 14px !important
+      span
+        margin-right: 10px
+        font-size: 14px !important
+        white-space: nowrap
+    &__link
+      margin-right: 10px
+      // margin-bottom: 10px
+      margin-bottom: 5px
+      display: inline-block
+      color: $text-color-light
+      text-decoration: underline
+      @media (min-width: 992px)
+        &:hover
+          color: $active-color
+  &__made
+    display: inline
+    white-space: nowrap
+    &__phone, &__text
+      margin: 0
+  .logo
+    width: 250px
+    display: block
+    @media (max-width: 1199px)
+      width: 200px
+    @media (max-width: 1040px)
+      // margin: auto
+      width: 160px
+    @media (max-width: 1023px)
+      margin: 0
+      margin-bottom: -11px
+    // @media (max-width: 543px)
+    //   width: 144px
+    // @media (max-width: 630px)
+    //   width: 250px
+    //   margin: 0
+.social
+  display: flex
+  justify-content: space-between
+  @media (max-width: 1023px)
+    width: 30%
+  &__item 
+    width: 50px
+    height: 50px
+    display: flex
+    align-items: center
+    justify-content: center
+    border: 4px solid $text-color-light
+    border-radius: 50%
+    text-align: center
+    img
+      max-width: 25px
+    &_hover
+      display: none
+    @media (min-width: 992px)
+      &:hover
+        border-color: $active-color 
+        .social__item
+          &_active 
+            display: none
+          &_hover
+            display: block 

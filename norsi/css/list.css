@@ -1,0 +1,18 @@
+.list {
+  -moz-columns: 2;
+  columns: 2; }
+  .list__item {
+    display: block;
+    font-family: "Bliss Pro", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+    color: #233449; }
+    @media (min-width: 992px) {
+      .list__item:hover {
+        cursor: pointer;
+        color: #00a9fc; } }
+  @media (max-width: 767px) {
+    .list {
+      -moz-columns: 1;
+      columns: 1; } }

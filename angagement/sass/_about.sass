@@ -1,0 +1,77 @@
+.about 
+	&__block
+		display: flex
+		flex-wrap: wrap
+		&:nth-child(even)
+			.about__img
+				order: -1 
+	&__info 
+		padding: 150px
+		flex-basis: 50%
+		color: $active-color
+		background-color: $bg-color-grey 
+		display: flex
+		align-items: center
+		justify-content: center
+		@media (max-width: 1440px)
+			padding: 100px
+		@media (max-width: 1199px)
+			padding: 50px
+		@media (max-width: 991px)
+			padding: 30px 40px
+			flex-basis: 100%
+	&__content 
+		max-width: 595px
+		@media (max-width: 767px)
+			width: auto
+	&__title
+		margin-bottom: 50px
+		font-family: $FontBold
+		font-size: 36px
+		line-height: 26px
+		@media (max-width: 543px)
+			margin-bottom: 20px
+			font-size: 14px
+			line-height: 9.65px
+	&__text
+		margin-bottom: 60px
+		font-size: 18px
+		line-height: 24px
+		p 
+			margin-bottom: 20px
+		@media (max-width: 543px)
+			margin-bottom: 33px
+			font-size: 12px
+			line-height: normal
+	&__link 
+		color: $active-color
+		font-family: $FontBold
+		font-size: 16px
+		line-height: 24px
+		text-transform: uppercase
+		text-decoration: underline
+		@media (min-width: 992px)
+			&:hover 
+				text-decoration: none
+				color: $bg-color-dark
+		@media (max-width: 543px)
+			font-size: 10px
+	&__img
+		flex-basis: 50%
+		// overflow: hidden
+		position: relative
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+		// img 
+		// 	position: absolute
+		// 	height: 100%
+		// 	max-width: none
+		@media (max-width: 991px)
+			height: 212px
+			flex-basis: 100%
+			order: -1
+			// img 
+			// 	width: 100%
+			// 	height: auto
+			// 	transform: translateY(-43%)

@@ -1,0 +1,286 @@
+body {
+  font-family: "GothaProReg", sans-serif;
+  color: #ffffff;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  height: 100vh; }
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 1.5s ease;
+  transition: all 1.5s ease; }
+
+button, input, a {
+  outline: none; }
+
+.header {
+  width: 100%;
+  padding: 30px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+  z-index: 10; }
+  .header .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  @media (max-width: 1400px) {
+    .header {
+      padding: 20px 0; } }
+  @media (max-width: 991px) {
+    .header .container {
+      -ms-flex-pack: distribute;
+      justify-content: space-around; } }
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+  @media (min-width: 576px) {
+    .container {
+      max-width: 540px; } }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px; } }
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px; } }
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1200px; } }
+  @media (min-width: 1400px) {
+    .container {
+      max-width: 1500px; } }
+
+.logo {
+  z-index: 11; }
+  @media (max-width: 1370px) {
+    .logo {
+      max-width: 250px; } }
+
+.cap-slider__wrap {
+  overflow: hidden;
+  position: relative;
+  height: 100%; }
+
+.cap-slider__item {
+  padding-top: 150px;
+  overflow: hidden;
+  height: 100vh !important;
+  font-family: Ubuntu;
+  font-weight: 700;
+  background-size: cover;
+  background-position: center bottom; }
+  @media (max-width: 1440px) {
+    .cap-slider__item {
+      padding-top: 90px; } }
+  @media (max-width: 991px) {
+    .cap-slider__item_shops-slide {
+      padding-top: 0; } }
+
+.cap-slider__next {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%); }
+  .cap-slider__next img {
+    max-width: 85px; }
+  .cap-slider__next_hover {
+    display: none; }
+  @media (min-width: 992px) {
+    .cap-slider__next:hover {
+      cursor: pointer; }
+      .cap-slider__next:hover .cap-slider__next_active {
+        display: none; }
+      .cap-slider__next:hover .cap-slider__next_hover {
+        display: block; } }
+
+.cap-slider__content {
+  max-width: 1199px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.6); }
+  @media (max-width: 1440px) {
+    .cap-slider__content {
+      max-width: 900px; } }
+  @media (max-width: 991px) {
+    .cap-slider__content {
+      padding: 20px; } }
+
+.cap-slider__title {
+  margin-bottom: 60px;
+  color: #232323;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 72px; }
+  @media (max-width: 1440px) {
+    .cap-slider__title {
+      margin-bottom: 40px;
+      font-size: 36px;
+      line-height: 45px; } }
+  @media (max-width: 991px) {
+    .cap-slider__title {
+      margin-bottom: 50px;
+      font-size: 18px;
+      line-height: normal; } }
+
+.cap-slider__btn {
+  width: 184px;
+  height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #ffffff;
+  font-family: "GothaProMed", sans-serif;
+  font-size: 14px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 6px;
+  background-color: #003073; }
+  @media (max-width: 991px) {
+    .cap-slider__btn {
+      width: 122px;
+      height: 26px;
+      font-size: 10px;
+      line-height: 26px; } }
+  .cap-slider__btn img {
+    margin-right: 14px; }
+  @media (min-width: 992px) {
+    .cap-slider__btn:hover {
+      cursor: pointer;
+      color: #003073;
+      background-color: #ffffff; } }
+
+.cap-shop {
+  margin-bottom: 10px;
+  width: 250px;
+  color: #fefefe; }
+  @media (max-width: 543px) {
+    .cap-shop {
+      width: 160px; } }
+  @media (min-width: 992px) {
+    .cap-shop:hover {
+      cursor: pointer; } }
+  .cap-shops {
+    height: 100%;
+    position: relative; }
+    .cap-shops .slick-track {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+      justify-content: space-around; }
+      @media (max-width: 991px) {
+        .cap-shops .slick-track {
+          height: 100vh;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center; } }
+    .cap-shops .slick-slide {
+      outline: none; }
+    .cap-shops__item {
+      margin: 20px;
+      display: -webkit-box !important;
+      display: -ms-flexbox !important;
+      display: flex !important;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    .cap-shops__next {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      z-index: 10;
+      display: none; }
+      @media (max-width: 991px) {
+        .cap-shops__next {
+          display: block; } }
+      .cap-shops__next_full {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        display: none !important; }
+      .cap-shops__next:hover .cap-shops__next_o {
+        display: none !important; }
+      .cap-shops__next:hover .cap-shops__next_full {
+        display: block !important; }
+    .cap-shops__prev {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      z-index: 10;
+      display: none; }
+      @media (max-width: 991px) {
+        .cap-shops__prev {
+          display: block; } }
+      .cap-shops__prev_o {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg); }
+      .cap-shops__prev_full {
+        display: none !important; }
+      .cap-shops__prev:hover .cap-shops__prev_o {
+        display: none !important; }
+      .cap-shops__prev:hover .cap-shops__prev_full {
+        display: block !important; }
+  .cap-shop__title {
+    font-family: "GothaProBol", sans-serif;
+    font-size: 16px;
+    text-decoration: underline; }
+    @media (max-width: 1440px) {
+      .cap-shop__title {
+        font-size: 14px;
+        line-height: normal; } }
+  .cap-shop__info {
+    max-height: 1px;
+    opacity: 0;
+    visibility: hidden;
+    font-family: "GothaProReg", sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    -webkit-transition: all 800ms ease;
+    transition: all 800ms ease;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+    @media (max-width: 1440px) {
+      .cap-shop__info {
+        font-size: 12px;
+        line-height: 14px; } }
+    .cap-shop__info span {
+      display: block; }
+    .cap-shop__info a {
+      display: block;
+      color: #fefefe; }
+      @media (min-width: 992px) {
+        .cap-shop__info a:hover {
+          color: #003073; } }
+  .cap-shop.active .cap-shop__info {
+    max-height: 300px;
+    margin: 10px;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: all 1000ms ease;
+    transition: all 1000ms ease; }

@@ -1,0 +1,153 @@
+.header
+  padding: 36px 0
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: center
+  color: $text-color-light
+  background-color: $active-color
+  @media (max-width: 1279px)
+    justify-content: space-around
+  &-index 
+    background: url('../img/main-img.png') center no-repeat
+    background-size: cover
+    .header 
+      background-color: transparent
+  .container  
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+    @media (max-width: 1279px)
+      justify-content: space-around
+
+.logo 
+  max-width: 210px
+  margin-left: 20px
+  display: block
+.menu 
+  margin-bottom: 20px
+  margin-left: 50px
+  display: flex
+  align-items: center
+  font-family: $FontBold
+  font-size: 18px
+  @media (max-width: 1279px)
+    width: 100%
+    margin-top: 20px
+    margin-bottom: 0
+    margin-left: 0
+    justify-content: space-around
+    order: 1
+  @media (max-width: 991px)
+    display: none
+  &__item 
+    padding: 5px
+    margin-right: 40px
+    color: $text-color-light
+    &:last-child 
+      margin-right: 0
+    @media (min-width: 992px)
+      &:hover
+        color: $active-color
+        background-color: $text-color-light
+    @media (max-width: 1279px)
+      margin-right: 0
+  &__btn 
+    display: none
+    position: fixed
+    top: 10px
+    left: 10px
+    width: 50px
+    height: 50px
+    background-color: $active-color
+    span
+      width: 30px
+      height: 4px
+      display: block
+      position: absolute
+      top: 23px
+      left: 10px
+      background-color: $bg-color-light
+      &::after, &::before
+        width: 30px
+        height: 4px
+        display: block
+        position: relative 
+        content: ""
+        background-color: $bg-color-light
+      &::after 
+        top: 6px
+      &::before
+        top: -10px
+    @media (max-width: 991px)
+      display: block
+  &-mobile
+    width: 100%
+    max-width: 500px
+    padding: 10px
+    // margin: 20px auto 
+    position: relative
+    background-color: $bg-color-light
+    &__item
+      padding: 10px
+      display: block 
+      color: $active-color
+      font-family: $FontBold
+      font-size: 20px
+      text-align: center
+      border-bottom: 1px solid $active-color
+
+
+.phone 
+  margin-bottom: 25px
+  padding: 5px
+  color: $text-color-light
+  font-family: $FontBold
+  font-size: 26px
+  text-transform: uppercase
+  @media (min-width: 992px)
+    &:hover
+      color: $active-color
+      background-color: $text-color-light
+  @media (max-width: 1279px)
+    margin-bottom: 15px
+.main-info 
+  padding-top: 46px
+  padding-bottom: 165px
+  @media (max-width: 1279px)
+    padding-top: 26px
+    padding-bottom: 65px
+  @media (max-width: 991px)
+    padding-bottom: 40px
+  @media (max-width: 767px)
+    padding-top: 10px
+  
+  &__title
+    margin-bottom: 65px
+    color: #fefefe
+    font-family: $FontBlack
+    font-size: 60px
+    line-height: 80px
+    @media (max-width: 991px)
+      margin-bottom: 40px
+      font-size: 40px
+      text-align: center
+      line-height: 60px
+    @media (max-width: 767px)
+      font-size: 26px
+      line-height: 32px
+  &__text 
+    margin-bottom: 25px
+    width: 75%
+    color: #fefefe
+    font-size: 18px
+    line-height: 26px
+    @media (max-width: 991px)
+      text-align: center
+      width: 100%
+    @media (max-width: 767px)
+      font-size: 16px
+
+
+

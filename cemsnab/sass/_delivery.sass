@@ -1,0 +1,57 @@
+.delivery 
+  padding: 90px 0 185px
+  background: url("../img/bg-delivery.png")
+  @media (max-width: 991px)
+    padding: 60px 0
+  .container 
+    margin-top: 90px
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    @media (max-width: 991px)
+      margin-top: 60px
+  &__info
+    max-width: 405px
+    // flex-basis: 35%
+    color: $text-color-light
+  &__subtitle 
+    margin-bottom: 30px
+    font-family: $FontBold
+    font-size: 30px
+    @media (max-width: 991px)
+      text-align: center
+  &__text
+    margin-left: 25px
+    margin-bottom: 70px
+    font-family: $FontMedium
+    font-size: 18px
+    list-style: disc
+    &-item 
+      margin-bottom: 5px
+      margin-left: -5px
+    @media (max-width: 991px)
+      margin-bottom: 40px
+  &__phone 
+    color: $text-color-light
+    font-family: $FontBlack
+    font-size: 50px
+    padding: 5px
+    @media (min-width: 992px)
+      &:hover 
+        cursor: pointer 
+        color: $active-color
+        background-color: $bg-color-light
+    @media (max-width: 767px)
+      display: block
+      font-size: 30px
+      text-align: center
+  .form
+    margin-left: 120px
+    padding: 10px 0 0 50px
+    // flex-basis: 20%
+    @media (max-width: 991px)
+      width: 100%
+      margin-left: 0
+      margin-top: 30px
+      align-items: center
+      padding: 0

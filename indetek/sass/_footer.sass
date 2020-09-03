@@ -1,0 +1,110 @@
+.footer
+  padding: 50px
+  display: flex
+  justify-content: space-between
+  background-color: $bg-color-dark
+  @media (max-width: 1440px)
+    padding: 40px 30px 
+  @media (max-width: 991px) 
+    flex-direction: column
+  @media (max-width: 787px)
+    padding: 30px 15px
+  &-menu 
+    position: relative
+    width: 75%
+    display: flex
+    justify-content: space-between
+    font-size: 22px
+    @media (max-width: 1440px)
+      font-size: 18px 
+    @media (max-width: 1199px)
+      // display: block
+      flex-wrap: wrap
+      font-size: 16px 
+    @media (max-width: 991px)
+      width: 100%
+    &__block
+      // width: 20%
+      display: inline-block
+      @media (max-width: 1199px)
+        width: 50% 
+        margin-bottom: 30px
+      @media (max-width: 543px)
+        width: 100%
+    &__title
+      display: block
+      font-weight: 600
+      text-decoration: none
+      color: $text-color-dark
+      @media (min-width: 992px)
+        &:hover 
+          cursor: pointer
+          color: $active-color2
+    &__item 
+      margin-top: 25px
+      display: block
+      text-decoration: none
+      color: $text-color-light2
+      @media (min-width: 992px)
+        &:hover 
+          cursor: pointer
+          color: $active-color2
+      @media (max-width: 1440px)
+        margin-top: 15px 
+      @media (max-width: 1199px)
+        margin-top: 10px
+  &-contact
+    font-size: 22px
+    text-align: right 
+    p 
+      margin: 0
+    a 
+      text-decoration: none
+      color: $text-color-dark
+      @media (min-width: 992px)
+        &:hover 
+          color: $active-color
+    @media (max-width: 1440px)
+      font-size: 18px
+    @media (max-width: 1199px)
+      font-style: 14px
+    @media (max-width: 991px)
+      padding-top: 15px
+      text-align: left 
+      color: $text-color-light2
+      border-top: 1px solid $text-color-light
+      a
+        color: $text-color-light2
+    &__address, &__email
+      margin-bottom: 20px
+      @media (max-width: 1440px)
+        margin-bottom: 15px 
+  .social
+    &__item
+      width: 40px
+      height: 30px    
+      &:not(:last-child)
+        margin-right: 20px
+      &_facebook
+        width: 16px
+      &_instagram
+        width: 31px
+      &_youtube 
+        width: 43px
+      &_whatsapp
+        width: 30px
+      @media (max-width: 1440px)
+        height: 25px
+        width: 35px
+        &_facebook
+          width: 14px
+        &_instagram
+          width: 26px
+        &_youtube
+          width: 36px
+        &_whatsapp
+          width: 25px
+        &:not(:last-child)
+          margin-right: 15px
+    @media (max-width: 991px)
+      display: none

@@ -1,0 +1,48 @@
+.contacts
+  width: 100%
+  padding: 60px 0 140px
+  position: relative
+  color: $text-color-dark
+  font-family: $FontBold
+  font-size: 30px
+  overflow: hidden
+  @media (max-width: 767px)
+    padding-bottom: 60px
+    font-size: 20px
+    text-align: center
+  &__map 
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    img
+      width: 100vw
+      margin: 0 auto
+      @media (max-width: 1920px)
+        bottom: 0
+        max-width: none
+        width: auto
+  &__address
+    padding-top: 20px
+    max-width: 400px
+    margin-bottom: 50px
+    @media (max-width: 767px)
+      padding-top: 40px
+      margin-bottom: 20px
+  &__phone 
+    margin-bottom: 10px
+    a 
+      color: $text-color-dark
+      @media (min-width: 992px)
+        &:hover 
+          cursor: pointer
+          color: $active-color
+  &__email 
+    a 
+      color: $text-color-dark
+      text-decoration: underline
+      @media (min-width: 992px)
+        &:hover 
+          cursor: pointer
+          color: $active-color
+  

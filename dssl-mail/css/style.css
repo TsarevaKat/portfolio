@@ -1,0 +1,195 @@
+body {
+  font-family: 'PT Sans', Arial, Helvetica, sans-serif; }
+
+a {
+  outline: none;
+  text-decoration: none; }
+
+img {
+  display: inline-block; }
+
+.table-main {
+  margin-top: 25px; }
+  @media (max-width: 600px) {
+    .table-main {
+      margin-top: 40px; } }
+
+.block-1 {
+  width: 100%;
+  min-height: 250px;
+  background: url("https://www.dssl.ru/upload/mail/bg-block1.png") center no-repeat #ffffff; }
+  @media (max-width: 600px) {
+    .block-1 {
+      display: none; } }
+  .block-1 td {
+    width: 300px; }
+  .block-1__title {
+    padding-left: 55px;
+    color: #ffffff;
+    font-family: "PT Sans";
+    font-size: 20px;
+    font-weight: 700; }
+    .block-1__title span {
+      display: block;
+      font-size: 11px; }
+  .block-1__logo {
+    height: 64px;
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 55px; }
+  .block-1__saving {
+    height: 55px;
+    padding-bottom: 24px; }
+    .block-1__saving img {
+      float: left;
+      margin-top: 2px;
+      margin-right: 20px; }
+  .block-1__raise img {
+    float: left;
+    margin-right: 18px; }
+  .block-1__text {
+    max-width: 195px;
+    margin-left: 64px;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 700;
+    color: #04a0df; }
+    .block-1__text span {
+      display: block;
+      font-size: 13px;
+      line-height: 11px;
+      font-weight: 400; }
+
+.block-2 {
+  width: 100%;
+  background-color: #f3fafd;
+  text-align: center; }
+  .block-2__title {
+    width: 323px;
+    padding: 20px 0;
+    display: inline-block;
+    position: relative;
+    top: -25px;
+    color: #38b8ce;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    -webkit-box-shadow: 0 5px 19px 2px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 5px 19px 2px rgba(0, 0, 0, 0.23);
+    border-radius: 10px;
+    background-color: #ffffff; }
+  .block-2__text {
+    margin-bottom: 25px;
+    color: #04a0df;
+    font-size: 20px;
+    font-weight: 700; }
+    .block-2__text span {
+      font-weight: 400;
+      display: block; }
+
+.block__link {
+  margin-bottom: 28px;
+  padding: 12px 20px;
+  display: inline-block;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 10px;
+  background-color: #99c45a;
+  border-bottom: 3px solid #74b65f;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s; }
+  @media (min-width: 992px) {
+    .block__link:hover {
+      cursor: pointer;
+      background-color: #74b65f; } }
+
+.block-3 {
+  width: 100%;
+  background-color: #ffffff;
+  text-align: center; }
+  .block-3__title {
+    padding: 35px 0;
+    color: #333333;
+    font-size: 20px;
+    font-weight: 700; }
+  .block-3__img {
+    width: 300px; }
+    @media (max-width: 600px) {
+      .block-3__img {
+        width: 100%;
+        display: block; } }
+  .block-3__text {
+    width: 300px;
+    padding-left: 35px;
+    color: #333333;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+    .block-3__text span {
+      margin-top: 15px;
+      display: block;
+      font-size: 11px; }
+    @media (max-width: 600px) {
+      .block-3__text {
+        width: 100%;
+        display: block;
+        padding: 0;
+        text-align: center; } }
+
+.block-4 {
+  width: 100%;
+  background-color: #f3fafd;
+  text-align: center; }
+  .block-4 tr {
+    vertical-align: middle; }
+  .block-4__contact {
+    width: 300px; }
+    @media (max-width: 600px) {
+      .block-4__contact {
+        width: 100%;
+        display: block;
+        margin-bottom: 10px; } }
+  .block-4__title {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    color: #04a0df;
+    font-size: 20px;
+    font-weight: 700; }
+  .block-4 a {
+    margin-left: 15px;
+    display: inline-block;
+    color: #04a0df;
+    font-size: 20px;
+    font-weight: 400; }
+    @media (min-width: 992px) {
+      .block-4 a:hover {
+        color: #333333; } }
+  .block-4 img {
+    vertical-align: middle; }
+
+.block-5 {
+  width: 100%;
+  background-color: #ffffff; }
+  .block-5__logo {
+    width: 240px;
+    text-align: center; }
+    .block-5__logo a {
+      display: block;
+      color: #333366;
+      font-size: 20px;
+      font-weight: 400;
+      text-decoration: underline; }
+      @media (min-width: 992px) {
+        .block-5__logo a:hover {
+          color: #04a0df; } }
+  .block-5__text {
+    padding-top: 36px;
+    padding-right: 55px;
+    padding-bottom: 14px;
+    color: #333333;
+    font-size: 11px;
+    font-weight: 400; }
+    .block-5__text div {
+      margin-bottom: 18px; }

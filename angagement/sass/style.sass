@@ -1,0 +1,266 @@
+@import "variables"
+
+*
+  box-sizing: border-box !important
+  outline: none
+
+body 
+  font-family: $FontRegular
+  color: $text-color-light
+  transition: all 0.2s ease
+  // overflow: hidden
+  height: 100vh
+
+a 
+  text-decoration: none
+
+button, a
+  transition: all 0.5s ease
+
+button, input 
+  outline: none
+
+@import "header"
+
+.container 
+  width: 100% 
+  padding-right: 15px
+  padding-left: 15px
+  margin-right: auto
+  margin-left: auto
+  @media (min-width: 576px) 
+    max-width: 540px
+  @media (min-width: 768px) 
+    max-width: 720px
+  @media (min-width: 992px) 
+    max-width: 960px
+  @media (min-width: 1200px) 
+    max-width: 1200px
+
+.main-list
+  padding-top: 50px
+  column-count: 2
+  &__item
+    display: block
+    color: $active-color
+    text-decoration: none
+    font-size: 50px
+    font-family: $FontBold
+    @media (min-width: 992px)
+      &:hover
+        color: $text-color-dark
+        // text-decoration: underline
+  @media (max-width: 767px) 
+    column-count: 1
+.logo
+  z-index: 11
+  @media (max-width: 1370px)
+    max-width: 250px
+  @media (max-width: 1024px)
+    max-width: none
+  @media (max-width: 767px)
+    max-width: 200px
+    
+input, textarea
+  &.error
+    margin-bottom: 0
+    border: 1px solid #f1f1f4
+    z-index: 1
+
+label.error 
+  width: 100%
+  margin-top: -4px
+  margin-bottom: 20px
+  display: block
+  color: #232323
+  font-size: 12px
+  border: 1px solid #dcdcdc
+  background: #dcdcdc
+  padding: 10px 13px 5px
+  border-radius: 0 0 6px 6px
+  transition: all 0.2s ease
+  // animation: 0.2s ease error-down
+
+.page
+  &__title
+    padding: 30px 0 60px
+    color: #333333
+    font-family: $UbuntuBold
+    font-size: 50px
+    max-width: 1050px
+    margin: 0 auto
+    // line-height: 26px
+    text-align: center
+    @media (max-width: 767px)
+      padding: 11px 0 17px
+      font-size: 35px
+    &_light
+      color: $text-color-light
+  &__subtitle
+    margin-bottom: 55px
+    color: #303030
+    font-family: $FontBold
+    font-size: 36px
+    line-height: 26px
+    text-align: center
+    &_light 
+      color: $text-color-light
+    @media (max-width: 767px)
+      margin-bottom: 30px
+      font-size: 20px
+    // @media (max-width: 543px)
+    //   margin-bottom: 15px
+    //   font-size: 16px
+  &__text
+    color: #3d3d3d
+    font-family: $ProxiRegular
+    font-size: 24px
+    line-height: 36px
+    p 
+      margin-bottom: 30px
+    @media (max-width: 767px)
+      font-size: 18px
+      line-height: normal
+      p 
+        margin-bottom: 20px
+
+.info-block
+  padding: 0 10px
+  margin-bottom: 150px
+  flex-basis: 50%
+  @media (max-width: 767px)
+    margin-bottom: 50px
+  &s
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+  &__img 
+    margin-bottom: 25px
+    img 
+      margin: 0 auto
+      display: block
+  &__num 
+    // margin-bottom: 30px
+    color: $active-color
+    font-family: $FontBold
+    font-size: 120px
+    line-height: normal
+    text-align: center
+    white-space: nowrap
+    opacity: 0
+    @media (max-width: 1199px)
+      font-size: 100px
+    @media (max-width: 991px)
+      font-size: 84px
+    @media (max-width: 767px)
+      font-size: 32px
+  &__text 
+    color: #515151
+    font-size: 30px
+    text-align: center
+    @media (max-width: 991px)
+      font-size: 27px
+    @media (max-width: 767px)
+      font-size: 11px
+
+.slider
+  &__honors
+    margin: 0 20px
+  &__item 
+    margin: 0 14px
+    display: inline-block
+    img 
+      border-radius: 12px
+      margin: 0 auto
+  display: flex !important
+  justify-content: center
+
+.slick-slide 
+  @media (max-width: 767px)
+    img 
+      width: 100%
+      height: 100%
+
+@import 'main-slider'        
+@import "map"
+@import "404"
+@import "about"
+@import "form"
+@import "client"
+@import "contacts"
+@import "catalog"
+@import "news"
+@import "history"
+@import "factory"
+@import "franchising"
+@import "detal"
+@import "modal"
+@import "footer"
+
+.mfp-fade.mfp-bg 
+  opacity: 0
+  transition: all 0.4s ease-out
+
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready 
+  opacity: 0.8
+
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing 
+  opacity: 0
+
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content 
+  opacity: 0
+  transition: all 0.4s ease-out
+
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content 
+  opacity: 1
+
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content 
+  opacity: 0
+
+div.search-page input.search-query
+  height: 40px
+  padding: 10px
+  line-height: 38px
+  border: 1px solid $active-color
+  background-color: #fff
+  border-radius: 4px
+  font-size: 0.65em
+div.search-page input.search-button
+  height: 40px
+  padding: 0 10px
+  color: $text-color-light
+  font-family: $FontRegular
+  font-weight: 700
+  line-height: 38px
+  // text-transform: uppercase
+  border: 1px solid $active-color
+  background-color: $active-color
+  border-radius: 4px
+  @media (min-width: 992px)
+    &:hover
+      cursor: pointer
+      color: $active-color
+      background-color: $text-color-light
+
+.iframe
+  &-wrap 
+    position: relative
+    padding-bottom: 56.25%;
+    height: 0
+    overflow: hidden
+    iframe 
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      border-width: 0
+      outline-width: 0
+
+

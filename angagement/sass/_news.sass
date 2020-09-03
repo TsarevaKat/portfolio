@@ -1,0 +1,111 @@
+.news
+	margin-top: 15px
+	.page__title
+		@media (max-width: 543px)
+			font-size: 18px
+			line-height: 20px
+	&-block
+		margin-bottom: 60px
+		display: flex
+		flex-wrap: wrap
+		// align-items: center
+		// justify-content: space-between
+		@media (min-width: 992px)
+			&:hover
+				.news-block__title 
+					color: $active-color
+					text-decoration: underline
+		@media (max-width: 767px)
+			margin-bottom: 40px
+		&__img 
+			margin-top: 10px
+			flex-basis: 26%
+			min-width: 285px
+			height: 214px
+			margin-right: 30px
+			border-radius: 8px 
+			overflow: hidden
+			img
+				max-width: none
+				max-height: 110%
+				border-radius: 8px 	
+			@media (max-width: 991px)
+				margin: 0 0 15px
+				flex-basis: 100%
+				min-width: 244px
+				width: 100%
+				img
+					max-height: none
+					max-width: 100%
+					transform: translate(0, -30%)
+			@media (max-width: 767px)
+				height: 113px
+		&__contant 
+			flex-basis: 65%
+			font-family: $ProxiRegular
+			@media (max-width: 991px)
+				flex-basis: 100%
+		&__title 
+			margin-bottom: 25px
+			color: #3d3d3d
+			font-family: $ProxiSemibold	
+			font-size: 24px
+			line-height: 36px
+			@media (max-width: 767px)
+				margin-bottom: 15px
+				font-size: 12px
+				line-height: normal 
+		&__prew 
+			font-size: 16px
+			color: darken($bg-color-dark, 50%)
+			margin-bottom: 10px
+			@media (max-width: 767px)
+				margin-bottom: 5px
+				font-size: 10px
+		&__date
+			margin-bottom: 35px 
+			color: #787878
+			font-size: 18px
+			// line-height: 36px
+			@media (max-width: 767px)
+				margin-bottom: 18px
+				font-size: 10px
+		&__link 
+			color: $active-color
+			font-size: 14px
+			text-transform: uppercase
+			text-decoration: underline
+			@media (max-width: 767px)
+				font-size: 10px 
+		&__text
+			color: #3d3d3d
+			font-size: 24px
+			font-weight: 400
+			line-height: 36px
+			p 
+				margin-bottom: 35px
+		&_detal 
+			margin-bottom: 200px
+			.news-block
+				&__img 
+					height: auto
+					margin: 0 0 70px
+					img 
+						max-width: 100%
+						transform: translate(0, 0)
+					@media (max-width: 767px)
+						margin-bottom: 25px
+				&__date 
+					font-size: 24px
+					@media (max-width: 767px)
+						font-size: 14px
+						margin-bottom: 20px
+						color: #3d3d3d
+				&__text 
+          p
+          text-align: justify
+          @media (max-width: 767px)
+            font-size: 18px
+            line-height: normal
+            p
+              margin-bottom: 30px

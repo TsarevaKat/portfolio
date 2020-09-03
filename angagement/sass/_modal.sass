@@ -1,0 +1,261 @@
+.burger
+  display: none
+  width: 100%
+  height: 100%
+  padding: 170px 100px 50px
+  position: fixed
+  top: 0
+  left: 0
+  background-color: $active-color
+  color: $text-color-light
+  z-index: 9
+  overflow-y: auto
+  @media (max-width: 543px)
+    padding: 94px 15px 50px
+  &-menu 
+    &__item 
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+      position: relative
+      white-space: nowrap
+      margin-bottom: 30px
+      @media (max-width: 543px)
+        margin: 0 25px
+        margin-bottom: 20px
+      > a, > div
+        // display: flex
+        // align-items: center
+        color: $text-color-light
+        font-family: $FontBold
+        font-size: 20px
+        line-height: 26px
+        @media (max-width: 543px)
+          font-size: 14px
+      > span
+        margin-left: 18px
+        display: inline-block
+        @media (max-width: 543px)
+          max-width: 10px
+          margin-left: 11px
+      &.active
+        .burger-submenu
+          // display: block
+          max-height: 300px
+          margin: 10px 30px 0
+          opacity: 1
+          visibility: visible
+          transition: all 1s ease
+          @media (max-width: 543px)
+            margin: 10px 15px 0
+        > span
+          // transform-origin: center 10px 0
+          transform: rotate(180deg)
+  &-submenu 
+    // display: none
+    flex-basis: 100%
+    max-height: 1px
+    opacity: 0
+    visibility: hidden
+    transition: all 1s ease
+    &__item
+      display: block
+      font-size: 16px
+      line-height: 36px
+      color: $text-color-light
+      @media (max-width: 543px)
+        font-size: 12px
+        line-height: 26px
+  &-social
+    display: flex
+    justify-content: center
+    width: 100%
+    &__img 
+      display: block
+    &__item
+      // padding: 5px
+      width: 28px
+      height: 28px
+      margin-right: 12px
+      border-radius: 4px
+      display: flex
+      align-items: center
+      justify-content: center
+      background-color: $active-color
+  &__search 
+    width: 70%
+    height: 32px
+    padding: 0 8px
+    margin-bottom: 35px
+    // margin-right: 12px
+    border: 1px solid $text-color-light
+    // text-align: right
+    line-height: 32px
+    background: transparent
+    border-radius: 4px 0 0 4px
+    @media (max-width: 543px)
+      height: 24px
+      line-height: 24px
+      margin-bottom: 17px
+    &::placeholder
+      color: $text-color-light
+      font-size: 14px
+      line-height: 32px
+      font-family: $FontBold
+      @media (max-width: 543px)
+        font-size: 10px
+        line-height: 24px
+    &-wrap 
+      width: 100%
+      display: flex
+    &-btn
+      height: 32px
+      width: 30%
+      padding: 0 10px
+      color: $active-color
+      font-family: $FontRegular
+      font-size: 14px
+      line-height: 32px
+      font-weight: 700
+      // text-transform: uppercase
+      border: 1px solid $text-color-light
+      border-left: none
+      background-color: $text-color-light
+      border-radius: 0 4px 4px 0 
+      @media (max-width: 543px)
+        height: 24px
+        font-size: 12px
+        line-height: 24px
+  &__btn 
+    width: 100%
+    height: 32px
+    margin-bottom: 35px
+    display: block
+    color: $active-color
+    font-size: 14px
+    line-height: 32px
+    font-family: $FontBold
+    text-align: center
+    border: 1px solid $text-color-light
+    background-color: $bg-color-light
+    border-radius: 4px
+    @media (max-width: 543px)
+      height: 24px
+      margin-bottom: 17px
+      font-size: 10px
+      line-height: 24px
+
+.popup
+  position: relative
+  width: auto
+  max-width: 365px
+  margin: 20px auto
+  border-radius: 8px
+  &-call
+    color: $text-color-light
+    background-color: $active-color
+    a 
+      color: $text-color-light
+    .popup-form__btn
+      border: 2px solid #ffffff
+      line-height: 28px
+    img 
+      position: relative
+      right: -57px
+    .mfp-close
+      color: $text-color-light !important
+  &-contact
+    color: $active-color
+    background-color: #eeeeee
+    .mfp-close
+      color: $active-color !important
+    a 
+      color: $active-color
+  &-video
+    // width: 1500px
+    margin-right: 40px
+    margin-left: 40px
+    max-width: 100%
+    position: relative
+    padding-bottom: 56.25%
+    padding-top: 30px
+    height: 0
+    overflow: hidden
+    @media (max-width: 991px)
+      margin-right: 20px
+      margin-left: 20px
+    @media (max-width: 767px)
+      margin-right: 5px
+      margin-left: 5px
+    iframe
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+    .mfp-close-btn-in .mfp-close, button.mfp-close
+      color: #fff !important
+    @media (max-width: 767px)
+      width: auto
+      max-height: 100vh
+  &__title
+    padding-top: 50px
+    font-family: "Exo 2"
+    font-size: 30px
+    font-weight: 700
+    line-height: 36px
+    text-align: center
+  &-form 
+    padding: 35px
+    &__input, &__textarea
+      width: 100%
+      height: 36px
+      margin-bottom: 25px
+      padding: 13px
+      color: $active-color
+      font-size: 14px
+      line-height: 36px
+      border: none
+      border-radius: 6px
+      background-color: #ffffff
+      &::placeholder
+        color: $active-color
+    &__textarea
+      height: 130px
+      line-height: normal
+      outline: none
+    
+    &__agree
+      font-size: 14px
+      margin-bottom: 25px
+      display: block
+      a 
+        text-decoration: underline
+        @media (min-width: 992px)
+          &:hover
+            text-decoration: none
+      input 
+        display: none
+      span
+        display: inline-block
+        width: 14px
+        height: 14px
+        background-color: #fff
+        border-radius: 4px
+      input:checked + span 
+        background: #fff url('../img/checked.png') center no-repeat
+        background-size: contain
+    &__btn 
+      width: 100% 
+      height: 36px
+      color: $text-color-light
+      font-family: $FontBold
+      font-size: 16px
+      line-height: 36px
+      text-transform: uppercase
+      background-color: $active-color
+      border-radius: 6px   
+      @media (min-width: 992px)
+        &:hover
+          color: $active-color
+          background-color: $text-color-light 

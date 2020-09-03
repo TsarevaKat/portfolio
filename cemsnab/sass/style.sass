@@ -1,0 +1,159 @@
+@import "variables"
+*
+  box-sizing: border-box
+body 
+  font-family: $FontRegular
+a 
+  text-decoration: none
+input, button 
+  outline: none
+
+.container
+  width: 100%
+  padding-right: 15px
+  padding-left: 15px
+  margin-right: auto
+  margin-left: auto
+  @media (min-width: 576px)
+    max-width: 540px
+  @media (min-width: 768px)
+    max-width: 720px
+  @media (min-width: 992px)
+    max-width: 960px
+  @media (min-width: 1280px)
+    max-width: 1280px
+.section
+  &__title 
+    color: $active-color
+    font-family: $FontBlack
+    font-size: 48px
+    line-height: 80px
+    text-align: center
+    text-transform: uppercase
+    @media (max-width: 991px)
+      line-height: 60px
+    @media (max-width: 767px)
+      font-size: 30px
+      line-height: 35px
+    &_light
+      color: $bg-color-light
+    &_ttfn 
+      text-transform: none
+    span 
+      display: block
+  &__link 
+    width: 400px
+    height: 60px
+    margin: 0 auto
+    display: block
+    color: $active-color
+    font-family: $FontBold
+    font-size: 18px
+    text-transform: uppercase
+    text-align: center
+    line-height: 54px
+    border: 4px solid $active-color
+    @media (min-width: 992px)
+      &:hover
+        cursor: pointer
+        color: $text-color-light
+        background-color: $active-color
+    @media (max-width: 767px)
+      width: 100%
+
+.form 
+  display: flex
+  flex-wrap: wrap
+  &__input
+    width: 315px
+    height: 62px
+    padding: 0 25px
+    margin-bottom: 30px
+    color: $text-color-light
+    font-family: $FontBold
+    font-size: 18px
+    line-height: 54px
+    text-transform: uppercase
+    border: 4px solid $text-color-light
+    background-color: transparent
+    @media (max-width: 1279px)
+      width: 255px
+    @media (max-width: 991px)
+      width: 80%
+      margin-bottom: 20px
+    @media (max-width: 767px)
+      width: 100%
+    &::placeholder
+      color: $text-color-light
+  &__btn 
+    width: 315px
+    height: 62px
+    color: $active-color
+    font-family: $FontBold
+    font-size: 18px
+    line-height: 62px
+    text-transform: uppercase
+    background-color: $text-color-light
+    @media (min-width: 992px)
+      &:hover
+        cursor: pointer
+        color: $text-color-light
+        background-color: $active-color
+    @media (max-width: 1279px)
+      width: 255px
+    @media (max-width: 991px)
+      width: 315px
+      order: 1
+    @media (max-width: 767px)
+      width: 100%
+  &__checkbox
+    // flex-basis: 100%
+    margin-top: 20px
+    // margin-left: 70%
+    margin-bottom: 20px
+    display: flex
+    flex-wrap: wrap
+    color: $text-color-light
+    font-size: 14px
+    @media (max-width: 991px)
+      margin-left: 0
+      justify-content: center
+      // flex-basis: 0
+    input 
+      display: none
+      &:checked + span 
+        background: $active-color url("../img/checked.png") center no-repeat
+        border-color: $active-color
+    span
+      width: 20px
+      height: 20px 
+      margin-right: 10px
+      display: block
+      border: 4px solid $text-color-light
+    &-agree 
+      max-width: 300px
+      @media (max-width: 991px)
+        max-width: none
+        width: calc(100% - 30px)
+  &_horizon
+    flex-direction: row 
+    justify-content: space-around
+    @media (max-width: 991px)
+      justify-content: center
+  &_vertical
+    flex-direction: column
+    justify-content: space-around
+    // .form__checkbox
+    //   margin-left: 0
+    //   margin-bottom: 20px
+    //   flex-basis: 0
+
+
+
+@import "header"
+@import "production"
+@import "estimation"
+@import "pairs"
+@import "delivery"
+@import "contacts"
+@import "footer"

@@ -1,0 +1,296 @@
+.footer 
+  width: 100%
+  padding: 7px 15px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  position: fixed
+  bottom: 0
+  left: 0
+  background-color: #ffffff
+  color: $active-color
+  z-index: 10
+  @media (max-width: 1024px)
+    padding: 17px 40px
+    background-color: $active-color
+    color: $text-color-light
+    flex-wrap: wrap
+  @media (max-width: 543px)
+    padding: 12px 15px
+    flex-direction: column
+    align-items: flex-start
+  &__info
+    font-size: 12px
+    z-index: 11
+    a 
+      margin-bottom: 20px
+      color: $active-color
+      text-decoration: underline
+      @media (min-width: 992px)
+        &:hover
+          text-decoration: none
+    @media (max-width: 1440px)
+      width: 150px 
+    @media (max-width: 1024px)
+      margin-bottom: 0
+      width: auto 
+      font-size: 14px
+    @media (max-width: 543px)
+      margin-bottom: 8px
+      font-size: 10px
+    &_detal  
+      display: none
+    &-google
+      display: none
+      margin-top: 20px
+      font-size: 10px !important
+      color: $text-color-dark
+      a 
+        color: $text-color-dark
+      @media (max-width: 1024px)
+        margin-top: 10px
+        color: $text-color-light
+        width: 100%
+        font-size: 8px !important
+        a 
+          color: $text-color-light
+  &__copyright
+    display: none
+    z-index: 11
+    a 
+      color: $text-color-light
+      text-decoration: underline
+    @media (max-width: 1024px)
+      display: block
+      font-size: 14px
+    @media (max-width: 543px)
+      font-size: 10px
+  &-menu 
+    display: flex
+    justify-content: space-between
+    flex-grow: 2
+    // position: relative
+    @media (max-width: 1024px)
+      display: none
+    &__item 
+      position: relative
+      white-space: nowrap
+      > a
+        padding: 0 13px
+        display: flex
+        align-items: center
+        color: $active-color
+        font-family: $FontBold
+        font-size: 14px
+        span
+          margin-left: 8px
+          margin-bottom: 5px
+          display: inline-block
+        @media (max-width: 1440px)
+          padding: 0 8px
+      @media (min-width: 992px)
+        &:hover
+          .footer-submenu
+            opacity: 1
+            visibility: visible
+          > a span
+            transform-origin: center 10px 0
+            transform: rotate(180deg)
+  &-submenu 
+    opacity: 0
+    visibility: hidden
+    width: 154px
+    padding: 17px 0px
+    position: absolute
+    bottom: 23px
+    background-color: $bg-color-light
+    z-index: 10
+    transition: 0.5s
+    &__item
+      padding: 3px 13px
+      display: block
+      font-size: 12px
+      line-height: 26px
+      color: $active-color
+      @media (min-width: 992px)
+        &:hover 
+          color: $text-color-light
+          background-color: $active-color
+  &-block_social
+    display: flex
+    // flex-grow: 1
+    // flex-wrap: wrap
+    // z-index: 11
+    &__info
+      flex-basis: 100%
+      display: none
+      max-width: 175px
+      margin-top: 10px
+      font-size: 12px
+      line-height: 20px
+    &__wrap 
+      margin-right: 4px
+      z-index: 10
+      @media (max-width: 1024px)
+        display: none
+    &__img 
+      display: block
+      &_active
+        display: none
+    &__item
+      width: 28px
+      height: 28px
+      margin-right: 12px
+      border-radius: 4px
+      display: flex
+      align-items: center
+      justify-content: center
+      background-color: $active-color
+      @media (max-width: 1440px)
+        margin-right: 8px
+      @media (min-width: 992px)
+        &:hover
+          background-color: $bg-color-light
+          .footer-block_social__img
+            display: none
+            &_active
+              display: block
+  &__search 
+    width: 70%
+    height: 28px
+    padding: 0 8px
+    border: 1px solid $active-color
+    // text-align: right
+    line-height: 28px
+    border-radius: 4px 0 0 4px
+    &::placeholder
+      color: $active-color
+      font-size: 12px
+      line-height: 24px
+    // @media (max-width: 1440px)
+    //   width: 140px
+    &-wrap
+      margin-right: 12px
+      width: 284px
+      display: flex
+      @media (max-width: 1440px)
+        width: 200px
+      @media (max-width: 1024px)
+        display: none
+    &-btn 
+      width: 30%
+      height: 28px
+      padding: 0 10px
+      color: $text-color-light
+      font-family: $FontRegular
+      font-size: 12px
+      line-height: 28px
+      font-weight: 700
+      // text-transform: uppercase
+      border: 1px solid $active-color
+      border-left: none
+      background-color: $active-color
+      border-radius: 0 4px 4px 0
+      @media (min-width: 992px)
+        &:hover
+          cursor: pointer
+          color: $active-color
+          background-color: $text-color-light
+  &__btn 
+    width: 282px
+    height: 28px
+    display: block
+    color: $text-color-light
+    font-size: 14px
+    line-height: 26px
+    font-weight: 700
+    text-align: center
+    border: 1px solid $active-color
+    border-radius: 4px
+    background-color: $active-color
+    @media (min-width: 992px)
+      &:hover
+        cursor: pointer
+        color: $active-color
+        background-color: $text-color-light
+    @media (max-width: 1440px)
+      width: 200px
+      min-width: 140px
+    @media (max-width: 1024px)
+      display: none
+  &__contacts
+    // flex-grow: 1  
+    display: flex
+    align-items: center
+  &_map
+    position: static
+  &_inner
+    height: auto
+    padding-bottom: 20px
+    padding-top: 20px
+    position: static
+    align-items: flex-start
+    .footer
+      &__info
+        &_main
+          display: block 
+          margin-bottom: 20px
+          @media (max-width: 1024px)
+            margin-bottom: 0
+        &_detal
+          display: block
+          @media (max-width: 1024px)
+            display: none !important
+        &-google 
+          display: block
+          &.footer__copyright
+            display: none
+            @media (max-width: 1024px)
+              display: block
+      &-menu 
+        margin: 0 5px
+        flex-grow: 2
+        &__item
+          > a
+            line-height: 26px;
+            @media (min-width: 992px)
+              &:hover
+                color: $text-color-light
+                background-color: $active-color
+          span
+            display: none
+      &-submenu
+        opacity: 1
+        visibility: visible
+        position: static
+        padding: 0
+        @media (max-width: 1440px)
+          width: 140px
+        &__item
+          padding: 0 13px
+          @media (max-width: 1440px)
+            padding: 0 8px
+      &-block_social
+        &__item
+          margin-bottom: 8px
+        &__info 
+          display: block
+          text-align: center
+      &__contacts  
+        flex-wrap: wrap
+        justify-content: space-around
+        // display: flex
+        // align-items: center
+        // @media (max-width: 1350px)
+        //   flex-direction: column
+      &__search
+        // width: 100%
+        &-wrap
+          margin: 0 6px 10px
+          @media (max-width: 1700px)
+            width: 46%
+          // margin-right: 0
+      &__btn 
+        margin: 0 6px 10px
+        @media (max-width: 1700px)
+          width: 46%

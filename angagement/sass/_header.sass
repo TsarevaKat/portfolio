@@ -1,0 +1,183 @@
+.header
+  width: 100%
+  padding: 30px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  position: fixed
+  top: 0
+  left: 0
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%)
+  z-index: 10
+  @media (max-width: 991px)
+    padding: 50px 30px
+  @media (max-width: 767px)
+    padding: 30px 15px
+  &-menu 
+    display: flex
+    justify-content: space-between
+    flex-grow: 0.5
+    flex-wrap: wrap
+    @media (max-width: 991px)
+      display: none
+    @media (max-width: 1370px)
+      justify-content: center
+    &__item
+      padding: 3px 8px
+      color: $text-color-light
+      font-family: $FontBold
+      font-size: 16px
+      &:not(:last-child)
+        // margin-right: 10px
+      @media (min-width: 992px)
+        &:hover 
+          cursor: pointer
+          color: $active-color
+          background-color: $bg-color-light
+          border-radius: 4px
+    &_mobile 
+      display: none
+      width: 60px
+      height: 45px
+      flex-direction: column
+      justify-content: space-between
+      z-index: 11 
+      span, &::after, &::before
+        width: 100%
+        height: 9px
+        display: block
+        background-color: $text-color-light
+        content: ''
+      @media (max-width: 767px)
+        width: 23px
+        height: 20px
+        span, &::after, &::before
+          height: 4px
+      //   display: block
+      //   background-color: $text-color-light
+      @media (max-width: 991px)
+        display: flex
+  &-contacts
+    text-align: center
+    @media (max-width: 991px)
+      display: none
+    &__phone 
+      margin-bottom: 5px
+      padding: 5px
+      display: block
+      color: $text-color-light
+      font-family: $FontBold
+      font-size: 24px
+      @media (min-width: 992px)
+        &:hover 
+          cursor: pointer
+          color: $active-color
+          background-color: $bg-color-light
+          border-radius: 4px
+      @media (max-width: 1199px)
+        font-size: 22px
+    &__btn
+      width: 284px
+      height: 30px
+      border-radius: 4px
+      background-color: #ffffff
+      display: block
+      color: $active-color
+      font-family: $FontBold
+      font-size: 14px
+      line-height: 30px
+      border: 1px solid transparent
+      @media (min-width: 992px)
+        &:hover
+          cursor: pointer
+          color: $text-color-light
+          background-color: $active-color
+      @media (max-width: 1370px)
+        width: 250px
+    &_mobile 
+      display: none
+      z-index: 11
+      @media (max-width: 991px)
+        display: block 
+      @media (max-width: 767px)
+        width: 21px
+  &_inner
+    padding-top: 24px
+    padding-bottom: 24px
+    position: static
+    color: $active-color
+    background-image: none
+    background-color: $bg-color-light
+    .phone
+      &_light
+        display: none
+      &_dark
+        display: block
+    .logo
+      &_light
+        display: none
+      &_dark
+        display: block
+    .header
+      &-menu 
+        &__item 
+          color: $active-color
+          @media (min-width: 992px)
+            &:hover
+              color: $text-color-light
+              background-color: $active-color
+        &_mobile 
+          span, &::after, &::before   
+            background-color: $active-color
+      &-contacts
+        &__phone
+          color: $active-color
+          @media (min-width: 992px)
+            &:hover 
+              color: $text-color-light
+              background-color: $active-color 
+        &__btn
+          color: $text-color-light
+          background-color: $active-color
+          border-color: $active-color
+          @media (min-width: 992px)
+            &:hover 
+              color: $active-color
+              background-color: $bg-color-light
+  &_active-burger
+    background: $active-color
+    position: fixed
+    .header
+      &-menu 
+        &_mobile
+          position: relative
+          span
+            background: transparent
+          &::after
+            // transform-origin: 100% 
+            transform: rotate(45deg)
+            position: absolute
+            top: 40%
+            left: 0
+            background-color: $bg-color-light
+          &::before
+            // transform-origin: 100%
+            transform: rotate(-45deg)
+            position: absolute
+            top: 40%
+            left: 0
+            background-color: $bg-color-light
+    &.header_inner
+      .logo 
+        &_light
+          display: block
+        &_dark
+          display: none
+      .phone
+        &_light
+          display: block
+        &_dark
+          display: none
+
+.phone_dark 
+  display: none

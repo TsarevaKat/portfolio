@@ -1,0 +1,173 @@
+.catalog 
+	padding: 15px
+	&-menu 
+		overflow-x: auto
+		scrollbar-width: none
+		// justify-content: space-between
+		// flex-wrap: wrap
+		&__wrap
+			position: relative
+			margin: 15px 15px 15px 0
+		&__content
+			display: flex
+			padding-right: 30px
+		&::-webkit-scrollbar
+			display: none
+		&__btn
+			display: none
+			width: 35px
+			height: 35px
+			padding: 5px
+			position: absolute 
+			background-color: $bg-color-light
+			top: 50% 
+			@media (min-width: 992px)
+				&:hover
+					cursor: pointer
+			img 
+				// display: block
+				// margin: 0 auto
+			&_next
+				right: -2px
+				transform: translateY(-50%) rotate(-90deg)
+			&_prev 
+				left: -2px
+				transform: translateY(-50%) rotate(90deg)
+			&.active 
+				display: flex
+				align-items: center
+				justify-content: center 
+		&__item
+			min-width: 130px
+			height: 30px
+			padding: 0 5px	
+			display: inline-block
+			margin: 0 10px
+			color: $active-color
+			font-size: 14px
+			line-height: 28px
+			text-align: center
+			border-radius: 4px
+			border: 1px solid $active-color
+			@media (min-width: 767px)
+				&:hover
+					color: $text-color-light
+					background-color: $active-color
+			&_collection 
+				min-width: 282px
+				color: $text-color-light
+				background-color: $active-color
+				text-transform: uppercase
+				@media (min-width: 767px)
+					&:hover
+						color: $active-color
+						background-color: $bg-color-light
+	&-block 
+		height: 510px
+		max-height: 510px
+		margin-bottom: 90px
+		padding: 60px
+		border-radius: 12px
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		// flex-wrap: wrap
+		&::before 
+			height: 100%
+			width: 70%
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			border-radius: 12px
+			background-color: $bg-color-grey
+			z-index: -1
+			transition: all 0.5s ease
+		&s 
+			margin: 50px 15px 0
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			// align-items: center
+		&_small
+			flex-basis: 32%
+			padding: 40px
+		&_middle
+			flex-basis: 48%
+		&_big 
+			flex-basis: 66%
+		&_huge
+			padding: 20px
+			flex-basis: 100%
+		&__mark 
+			position: absolute
+			top: 14px
+			left: 14px
+			font-family: $ProxiBlack
+			font-size: 16px
+			line-height: normal
+			letter-spacing: 2px
+			text-transform: uppercase
+			&_new 
+				color: $active-color
+			&_hit 
+				color: red 
+		&__img 
+			height: 100%
+			width: 100%
+			display: flex 
+			align-items: center
+			justify-content: center
+			&_chair
+				max-width: 70%
+			img 
+				max-height: 100%
+				transform: scale(0.9)
+				transition: all 0.5s ease
+		&__title
+			position: absolute
+			left: 40px
+			bottom: 40px
+			color: $active-color
+			font-family: "Exo 2"
+			font-size: 36px
+			font-weight: 500
+			line-height: 36px
+		@media (min-width: 992px)
+			&:hover 
+				&::before 
+					width: 100%
+					background-color: darken($bg-color-grey, 5%)
+					transition: all 0.5s ease 
+				img 
+					transform: scale(1)
+					transition: all 0.5s ease
+		@media (max-width: 1449px)
+			height: 400px
+			margin-bottom: 50px
+		@media (max-width: 1024px)
+			height: 350px
+			padding: 30px
+			&__title 
+				left: 30px
+				bottom: 30px
+			&_chair
+				max-width: 75%
+		@media (max-width: 991px)
+			&_small
+				flex-basis: 50%
+			&_middle, &_big, &_huge
+				flex-basis: 100%
+		@media (max-width: 543px)
+			padding: 10px
+			height: 205px
+			&__title 
+				left: 12px
+				bottom: 12px
+				font-size: 14px
+			&__mark 
+				font-size: 12px
+			&_small 
+				padding: 0

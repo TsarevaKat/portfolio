@@ -1,0 +1,402 @@
+@import "variables"
+
+* 
+	box-sizing: border-box	
+
+body 
+	font-family: $FontRegular 
+
+a 
+	text-decoration: none
+
+.container 
+	max-width: 1286px
+	margin: 0 auto
+	padding: 0 30px 
+
+.section
+	&__title 
+		font-family: $TitleBold
+		font-size: 68px  
+		max-width: 536px
+		&_light
+			color: $text-color-light
+		&_dark 
+			color: $text-color-dark2 
+		&_active 
+			color: $active-color 
+		@media (max-width: 1300px) 
+			font-size: 58px
+		@media (max-width: 767px)
+			font-size: 48px
+		@media (max-width: 543px)
+			font-size: 32px
+	&-block 
+		flex-basis: 33%
+		text-align: center
+		@media (max-width: 991px)
+			flex-basis: 50%
+			margin-bottom: 20px
+		@media (max-width: 767px)
+			flex-basis: 100%
+		&__img 
+			margin-bottom: 21px
+			img 
+				display: block 
+				margin: 0 auto
+		&__title 
+			margin-bottom: 17px
+			font-family: $TitleBold
+			font-size: 24px
+		&__text 
+			font-family: $FontBold
+			font-size: 18px
+		&s 
+			margin-top: 80px
+			display: flex 
+			justify-content: space-between 
+			flex-wrap: wrap
+			@media (max-width: 991px)
+				justify-content: space-around
+			@media (max-width: 767px)
+				margin-top: 40px
+	&-list 
+		margin-top: 44px
+		margin-bottom: 65px
+		@media (max-width: 543px)
+			margin-top: 40px
+			margin-bottom: 40px
+		&__item
+			color: $text-color-dark1
+			font-size: 20px
+			line-height: 36px
+			@media (max-width: 543px)
+				font-size: 16px
+				line-height: 24px
+			&::before
+				content: ''
+				width: 10px
+				height: 10px
+				margin-right: 20px
+				display: inline-block
+				background-color: $active-color
+				border-radius: 50%
+
+.main
+	position: relative 
+	@media (max-width: 767px) 
+		margin-bottom: -70px
+	&__img 
+		width: 100%
+		overflow: hidden
+		img 
+			width: 100% 
+			position: relative 
+			left: 50%
+			transform: translateX(-50%)
+			@media (max-width: 1938px)
+				max-width: none
+				width: auto
+			@media (max-width: 991px)
+				left: 0
+				transform: translateX(0)
+	&__content 
+		max-width: 650px
+		margin-top: 120px
+		position: absolute
+		top: 0
+		right: 50% 
+		z-index: 2 
+		@media (max-width: 1300px) 
+			right: 45%
+			margin-left: 20px
+		@media (max-width: 991px)
+			margin-left: 0
+			right: 50%
+			transform: translate(50%) 
+		@media (max-width: 543px)
+			width: 100%
+			margin-top: 160px
+		.logo 
+			position: absolute
+			top: -70px
+			left: 40px 
+			@media (max-width: 543px) 
+				top: -120px
+		.btn 
+			margin-left: 40px
+	&-info 
+		max-width: 650px
+		height: 402px
+		margin-bottom: 21px
+		padding: 28px 40px
+		background: url('../img/bg-main-text.png') center no-repeat 
+		background-size: contain 
+		.section__title 
+			margin-bottom: 30px 
+		@media (max-width: 1300px) 
+			padding: 25px
+		@media (max-width: 991px) 
+			width: 600px
+			padding: 28px 40px
+		@media (max-width: 767px)
+			width: 500px
+			padding: 25px
+		@media (max-width: 543px)
+			width: 100% 
+			height: auto
+			background-size: cover
+		&__text
+			max-width: 402px 
+			margin-left: 43px
+			color: #c6d50c
+			font-family: $FontLight
+			font-size: 26px 
+			span 
+				font-family: $FontBold  
+				white-space: nowrap
+			@media (max-width: 1300px) 
+				max-width: 350px
+				margin-left: 20px 
+				// font-size: 22px
+			@media (max-width: 991px)  
+				max-width: 402px
+				margin-left: 43px
+			@media (max-width: 767px) 
+				max-width: 350px
+				margin-left: 20px 
+			@media (max-width: 543px) 
+				// max-width: none 
+				// margin-right: 20px
+				font-size: 20px
+				margin-bottom: 40px
+
+.btn 
+	width: 244px
+	height: 69px
+	display: block 
+	font-family: $TitleBold
+	font-size: 18px
+	text-align: center
+	text-transform: uppercase
+	line-height: 69px
+	box-shadow: 0 0 63px 21px rgba(0, 0, 0, 0.33)
+	border-radius: 35px
+	@media (max-width: 767px) 
+		margin: 0 auto
+	&_light 
+		color: $text-color-dark1
+		background-color: $text-color-light
+		@media (min-width: 992px)
+			&:hover
+				color: $text-color-light
+				background-color: $active-color
+	&_dark 
+		color: $text-color-light
+		background-color: $active-color 
+		box-shadow: 0 0 52px 5px rgba(0, 0, 0, 0.33)
+		@media (min-width: 992px)
+			&:hover
+				color: $text-color-dark1
+				background-color: $text-color-light
+	&_long 
+		width: 596px
+		max-width: 100%
+		margin-left: auto 
+		margin-right: auto 
+		color: $text-color-dark1
+		font-size: 20px
+		box-shadow: 0 0 45px 6px rgba(0, 0, 0, 0.35)
+		@media (min-width: 992px)
+			&:hover
+				color: $text-color-light
+				background-color: $active-color
+
+.why 
+	padding-top: 26px
+	padding-bottom: 110px
+	.section
+		&-block 
+			&__title 
+				color: $active-color
+	@media (max-width: 767px) 
+		padding-top: 0 
+		padding-bottom: 0
+
+.how, .progress 
+	position: relative
+	@media (max-width: 543px)
+		margin: -50px 0
+	&__img 
+		width: 100%
+		overflow: hidden
+		img 
+			width: 100%
+			position: relative 
+			left: 50%
+			transform: translateX(-50%)
+		@media (max-width: 1930px)
+			img 
+				max-width: none 
+				width: auto
+		@media (max-width: 767px)
+			display: none
+	&-wrap 
+		width: 100%
+		padding-top: 150px
+		position: absolute
+		top: 0
+		@media (min-width: 1920px)
+			padding-top: 0
+			top: 50%
+			transform: translateY(-50%)
+		@media (max-width: 767px)
+			padding-bottom: 150px
+			position: static 
+			background-position: center
+			background-repeat: no-repeat
+			background-size: cover
+
+.how
+	@media (max-width: 991px)
+		&__img 
+			img 
+				height: 1050px
+	@media (max-width: 767px)
+		&-wrap
+			background-image: url('../img/bg-1.png')
+	.section
+		&-block 
+			&__title 
+				color: $text-color-light
+			&s 
+				margin-bottom: 55px 
+
+.progress 
+	@media (max-width: 1199px)
+		&__img 
+			img 
+				height: 1000px
+	@media (max-width: 991px)
+		&__img 
+			img 
+				height: 1050px
+	@media (max-width: 767px)
+		&-wrap
+			background-image: url('../img/bg-2.png')
+	.section
+		&__title 
+			max-width: 900px
+			span 
+				display: block
+			@media (max-width: 543px)
+				span
+					display: inline
+					&.section__title_dark 
+						display: block
+		&-block 
+			flex-basis: auto
+			max-width: 250px
+			text-align: left
+			&__title 
+				margin-bottom: 0
+				color: $text-color-dark2
+				font-family: $TitleBold
+				font-size: 68px
+				@media (max-width: 1300px) 
+					font-size: 58px
+				@media (max-width: 767px)
+					font-size: 48px
+			&__text 
+				color: $text-color-light
+				font-family: $FontRegular
+				font-size: 24px
+			@media (max-width: 1199px)
+				margin-bottom: 20px
+				width: 50%
+				max-width: none
+				text-align: center
+				&__text 
+					max-width: 250px
+					margin: 0 auto
+					// text-align: left  
+			@media (max-width: 767px)
+				width: 100%
+
+
+.reviews
+	padding-top: 40px
+	padding-bottom: 240px
+	@media (max-width: 767px)
+		padding-top: 0
+		padding-bottom: 150px
+	@media (max-width: 543px)
+		padding-bottom: 100px
+	.section
+		&__title 
+			max-width: 1045px
+	&-slider 
+		margin-top: 70px
+		margin-bottom: 100px
+		@media (max-width: 767px)
+			margin-top: 40px
+			margin-bottom: 70px
+		.slick-track 
+			display: flex
+		&__wrap 
+			margin: 0 -15px
+			position: relative
+			@media (max-width: 1300px)
+				margin: 0
+				// padding: 0 15px
+		&__arrow 
+			height: 26px
+			position: absolute
+			top: 50%
+			@media (min-width: 992px) 
+				&:hover 
+					cursor: pointer
+		&__next 
+			right: -31px
+			transform: rotate(180deg)
+			@media (max-width: 1300px)
+				right: -20px
+		&__prev
+			left: -31px
+			// transform: translateY(-50%)
+			@media (max-width: 1300px) 
+				left: -20px
+		&__item 
+			// max-width: 280px
+			padding: 0 15px
+			height: auto !important
+			display: flex !important	
+			flex-direction: column
+			justify-content: space-between
+		&__photo
+			width: 76px
+			height: 76px
+			margin-bottom: 17px
+			overflow: hidden
+			border-radius: 50%
+			background-color: #f0f0f0
+		&__text 
+			margin-bottom: 16px
+			color: $text-color-dark1
+			font-size: 16px
+			font-style: italic
+		&__info 
+			color: $active-color
+			font-family: $TitleRegular
+			font-size: 16px
+		&__author
+			font-family: $TitleBold 
+			font-size: 18px 
+
+.info 
+	margin-bottom: 160px
+	color: $text-color-dark2
+	font-size: 16px
+	line-height: 24px
+	@media (max-width: 767px)
+		margin-bottom: 50px

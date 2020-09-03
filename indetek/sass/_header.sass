@@ -1,0 +1,284 @@
+.header 
+  // background: rgb(223,224,225)
+  background: linear-gradient(0deg, #b8babc 0%, #fff 60%)
+  &-top 
+    padding: 40px 50px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    @media (max-width: 1440px)
+      padding: 20px 30px
+    @media (max-width: 1024px)
+      align-items: center 
+    @media (max-width: 767px)
+      padding: 20px 15px
+  &__contacts 
+    max-width: 700px
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-end
+  .phone 
+    @media (max-width: 1024px)
+      width: 30px
+      height: 30px
+      span 
+        display: none
+      svg 
+        width: 30px
+        height: 30px
+    @media (max-width: 543px)
+      margin-right: 10px
+      width: 25px
+      height: 25px
+      svg 
+        width: 25px
+        height: 25px
+  &__search 
+    margin-top: 30px
+    @media (max-width: 1920px)
+      margin-top: 15px
+    @media (max-width: 1024px)
+      position: absolute 
+      top: -100%
+      left: 0
+      width: 100%
+      margin-top: 0
+      padding: 35px 30px 30px
+      // justify-content: 
+      background-color: #fff
+      transition: top 0.6s
+      .form
+        &__icon 
+          display: none
+        &__input 
+          width: 100%
+      &.active 
+        top: 0
+    @media (max-width: 543px)
+      padding: 20px 15px
+    .search__btn 
+      position: relative
+      input 
+        width: 40px
+        height: 40px
+        z-index: 1
+        border: none
+        background-color: transparent
+      svg 
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 26px
+        height: 26px
+        z-index: 0
+        fill: $text-color-light
+        transform: translate(-50%, -50%)
+      &:focus
+        svg 
+          fill: $active-color
+      @media (min-width: 992px)
+        &:hover 
+          input
+            cursor: pointer
+          svg 
+            fill: $active-color
+    .btn 
+      width: 40px
+    &-close
+      position: relative
+      width: 25px
+      height: 25px
+      margin-left: 10px
+      display: none
+      align-items: center
+      justify-content: center
+      &::before, &::after
+        position: absolute
+        width: 100%
+        height: 3px
+        display: block
+        background-color: $text-color-light2
+        content: ''
+      &::before 
+        transform: rotate(45deg)
+      &::after
+        transform: rotate(-45deg)
+      @media (max-width: 1024px)
+        display: flex
+  &-menu
+    margin: 0 50px
+    padding: 40px 0
+    display: flex
+    justify-content: center
+    border-top: 1px solid $bg-color-dark
+    @media (max-width: 1920px)
+      margin: 0 30px 
+      padding: 20px 0 
+    @media (max-width: 1024px)
+      position: absolute
+      top: 0
+      left: -100%
+      z-index: 15
+      width: 100% 
+      height: 100vh
+      margin: 0
+      padding: 70px 0
+      justify-content: flex-start
+      flex-direction: column
+      background-color: #fff 
+      transition: left 0.6s
+      overflow-y: auto
+      &.active 
+        left: 0
+    &__item
+      position: relative
+      &:not(:last-child)
+        margin-right: 70px
+        padding-right: 70px
+        border-right: 1px solid $bg-color-dark
+      &:focus
+        .header-submenu 
+          display: block
+      @media (min-width: 992px)
+        &:hover 
+          .header-submenu 
+            display: block
+      @media (max-width: 1920px)
+        &:not(:last-child)
+          margin-right: 40px
+          padding-right: 40px
+      @media (max-width: 1440px)
+        &:not(:last-child)
+          margin-right: 30px
+          padding-right: 30px
+      @media (max-width: 1024px)
+        padding: 10px 30px
+        border-right: none
+        &:not(:last-child)
+          margin-right: 0
+      @media (max-width: 543px)
+        padding: 10px 15px
+    &__link
+      font-size: 38px
+      font-weight: 600
+      text-decoration: none
+      color: $text-color-dark
+      &.active 
+        color: $active-color
+      &:focus
+        color: $active-color
+      @media (min-width: 992px)
+        &:hover 
+          cursor: pointer
+          color: $active-color
+      @media (max-width: 1920px) 
+        font-size: 26px
+      @media (max-width: 1440px) 
+        font-size: 22px
+      &-wrap 
+        display: flex
+        align-items: center 
+        &.active 
+          .header-menu__arrow 
+            transform: rotate(-90deg)
+          // & ~ .header-submenu 
+          //   display: block
+    &__arrow 
+      width: 20px
+      height: 20px
+      margin-left: 10px
+      display: none
+      transform: rotate(90deg)
+      transition: transform 0.6s
+      svg 
+        fill: $text-color-dark
+      @media (max-width: 1024px)
+        display: inline-block
+  &-submenu 
+    position: absolute
+    left: -25px
+    bottom: 0
+    z-index: 1
+    display: none
+    padding: 25px
+    background-color: rgba(#fff, 0.79)
+    transform: translateY(100%)
+    @media (max-width: 1024px)
+      position: static
+      display: none
+      transform: translateY(0)
+      padding: 15px
+    &__link 
+      display: block
+      font-size: 22px
+      font-weight: 600
+      text-decoration: none
+      color: $text-color-light2
+      white-space: nowrap
+      &:not(:last-child)
+        margin-bottom: 10px
+      &.active 
+        color: $active-color2
+      &:focus
+        color: $active-color2
+      @media (min-width: 992px)
+        &:hover 
+          cursor: pointer
+          color: $active-color2
+      @media (max-width: 1920px)
+        font-size: 18px
+      @media (max-width: 1024px)
+        white-space: normal
+  &-bottom
+    display: flex
+    img 
+      width: 100%
+      height: 100%
+  &-burger
+    width: 30px
+    height: 20px 
+    display: flex 
+    flex-direction: column
+    justify-content: space-between
+    span, &::before, &::after
+      width: 100%
+      height: 4px
+      display: block
+      background-color: $text-color-light2
+      content: ''
+    &.active
+      position: relative
+      justify-content: center
+      z-index: 16
+      span 
+        opacity: 0
+        visibility: hidden 
+      &::before, &::after
+        position: absolute
+      &::before 
+        transform: rotate(45deg)
+      &::after
+        transform: rotate(-45deg)
+    @media (max-width: 543px)
+      width: 25px
+    &__wrap 
+      width: 90px
+      display: none
+      @media (max-width: 1024px)
+        display: block
+      @media (max-width: 543px)
+        width: 50px 
+  .social 
+    @media (max-width: 1024px)
+      display: none
+  .btn-search
+    display: none
+    width: 30px
+    height: 30px
+    svg 
+      fill: #898b8e
+    @media (max-width: 1024px)
+      display: block
+    @media (max-width: 543px)
+      width: 25px
+      height: 25px

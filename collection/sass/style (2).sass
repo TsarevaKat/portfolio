@@ -1,0 +1,433 @@
+@import "variables"
+
+* 
+  box-sizing: border-box
+
+body 
+  font-family: $FontRegular
+  background: $bg-color-dark
+  color: $text-color-light
+
+img 
+  max-width: 100%
+
+button, input 
+  outline: none
+
+.container
+  margin-left: auto 
+  margin-right: auto
+  padding-left: 15px 
+  padding-right: 15px
+  @media (min-width: 576px)
+    max-width: 540px
+  @media (min-width: 768px)
+    max-width: 720px
+  @media (min-width: 992px)
+    max-width: 960px
+  @media (min-width: 1200px)
+    max-width: 1140px
+      
+@import "cap"
+@import "header"
+
+.btn 
+  height: 28px
+  padding: 0 10px
+  display: block
+  color: $active-color
+  font-family: $FontLight
+  font-size: 12px
+  line-height: 26px
+  text-align: center
+  text-decoration: none
+  border-radius: 22px
+  border: 1px solid $active-color
+  @media (min-width: 992px)
+    &:hover 
+      cursor: pointer
+      color: $text-color-dark
+      background-color: $active-color 
+  &_news 
+    display: inline-block
+    margin-left: auto 
+    margin-right: auto
+    width: 129px
+
+.main
+  max-height: 100vh
+  overflow: hidden
+  position: relative
+  font-family: $TitleRegular
+  &__info 
+    width: 100%
+    position: absolute
+    top: 55%
+    text-transform: uppercase
+  &__title 
+    // max-width: 590px
+    margin-bottom: 8px
+    font-size: 40px
+    span 
+      margin: 10px 0
+      display: block
+      font-size: 30px
+      img 
+        height: 20px
+  &__subtitle 
+    font-size: 50px
+  img 
+    animation-name: bg-slider
+    animation-duration: 1.5s
+    animation-delay: .3s
+    animation-iteration-count: 1
+    animation-fill-mode: forwards
+
+.section 
+  &_light 
+    color: $text-color-dark
+    background-color: #fff
+    .section
+      &__title, &__subtitle 
+        color: $active-color-dark
+    .btn 
+      color: $active-color-dark
+      border-color: $active-color-dark
+      @media (min-width: 992px)
+        &:hover 
+          color: $text-color-dark
+          background-color: $active-color-dark
+  &__bg 
+    padding: 65px 0
+    border-top: 1px solid $active-color
+    border-bottom: 1px solid $active-color
+    background-image: url('../img/bg.png')
+  &__info 
+    padding: 65px 0
+  &__img 
+    width: 100%
+    margin-bottom: -3px
+  &__title 
+    margin-bottom: 27px
+    color: $active-color
+    font-family: $TitleRegular
+    font-size: 30px
+    text-transform: uppercase
+  &__subtitle 
+    margin-bottom: 22px
+    color: $active-color
+    font-family: $TitleRegular
+    font-size: 25px
+    text-transform: uppercase
+  &__text 
+    max-width: 933px
+    font-size: 18px
+    p 
+      &:not(:last-child)
+        margin-bottom: 20px
+  &-block
+    margin: 0 20px 30px
+    border: 1px solid transparent
+    position: relative 
+    flex-basis: 29%
+    @media (max-width: 991px)
+      flex-basis: 40% 
+    @media (max-width: 543px)
+      flex-basis: 100%
+      > img 
+        width: 100%
+    &s 
+      margin: 0 -21px
+      display: flex
+      flex-wrap: wrap
+      // justify-content: space-between 
+      @media (max-width: 991px)
+        justify-content: center
+    > img 
+      margin-bottom: -4px
+      // height: 100%
+    &__title 
+      display: none
+      position: absolute
+      top: 5px 
+      left: 10px
+      color: $active-color
+      font-size: 18px
+    &__time 
+      display: none
+      position: absolute
+      right: 15px
+      bottom: 10px
+      font-size: 14px
+    &:hover 
+      border-color: $active-color
+      .section-block
+        &__title, &__time 
+          display: block
+      &::before
+        content: ""
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(4, 4, 4, 0.5)
+    &_develop
+      margin: 0 19px 30px
+      flex-basis: 29%
+      @media (max-width: 991px)
+        flex-basis: 40% 
+      @media (max-width: 543px)
+        flex-basis: 100%
+        > img 
+          width: 100%
+    &__text 
+      max-width: 324px
+      margin-top: 25px
+      font-size: 18px
+      line-height: 26px
+      span 
+        display: block
+      @media (max-width: 543px)
+        text-align: center
+        margin: 25px auto 0
+  &-two 
+    display: flex
+    @media (max-width: 767px)
+      flex-wrap: wrap
+    &__img 
+      flex-basis: 65%
+      @media (max-width: 767px)
+        order: 1 
+        flex-basis: 100%
+    &__info 
+      margin-left: 36px
+      @media (max-width: 767px)
+        margin-left: 0
+        flex-basis: 100%
+
+.advantage 
+  &-block 
+    text-align: center
+    flex-basis: 20%
+    @media (max-width: 1199px)
+      flex-basis: 30%
+      margin-bottom: 20px
+      padding: 0 10px
+    &__title 
+      font-size: 20px
+    &__value 
+      height: 100%
+      // vertical-align: middle
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      color: $active-color
+      font-family: $TitleRegular
+      font-size: 60px
+    span
+      display: block
+    small
+      color: $text-color-light
+      font-family: $FontRegular
+      font-size: 18px
+    &s
+      display: flex
+      justify-content: space-around
+      flex-wrap: wrap
+      @media (max-width: 1199px) 
+        justify-content: center
+
+.award
+  margin-bottom: 30px
+  display: flex
+  align-items: flex-start
+  &__text 
+    max-width: 697px
+    margin-left: 25px
+    font-size: 18px
+    line-height: 26px
+  &s 
+    margin-top: 60px
+    &__info
+      margin-top: 60px
+      font-size: 18px
+      line-height: 26px
+
+.buy
+  &-tab
+    font-size: 18px
+    &:not(:last-child)
+      margin-right: 80px  
+    input 
+      display: none
+      &.active
+        + label 
+          opacity: 1
+    label    
+      opacity: 0.5
+    &s 
+      display: flex
+    &__content 
+      padding-top: 35px
+      display: none
+      &.active 
+        display: block
+      .btn 
+        width: 160px
+        margin: 0 auto
+        color: $text-color-light
+        border-color: $text-color-light
+        @media (min-width: 992px)
+          &:hover 
+            color: $text-color-dark
+            background-color: $text-color-light 
+
+.news
+  &-block
+    min-height: 208px
+    margin: 0 20px 30px
+    padding: 25px
+    flex-basis: 29%
+    background-color: rgba(253, 241, 226, 0.5)
+    @media (max-width: 991px)
+      flex-basis: 44%  
+    @media (max-width: 767px)
+      flex-basis: 100%
+      min-height: auto
+    &s
+      display: flex
+      flex-wrap: wrap
+      margin: 0 -20px 
+      @media (max-width: 991px) 
+        justify-content: center
+    &__title 
+      margin-bottom: 15px
+      font-family: $FontBold
+      font-size: 18px
+    &__text 
+      font-size: 14px
+
+.video-online 
+  display: flex
+  align-items: center
+  color: $text-color-light
+  font-size: 14px
+  text-decoration: none
+  img 
+    margin-right: 10px
+  @media (min-width: 992px)
+    &:hover 
+      color: $active-color
+
+.contacts 
+  &__info 
+    margin-bottom: 23px
+    display: flex
+    align-items: flex-start
+    img 
+      margin-right: 14px
+  &__text 
+    font-size: 14px
+    span
+      display: block
+  a 
+    color: $text-color-dark
+    text-decoration: none
+    @media (min-width: 992px)
+      &:hover 
+        color: $active-color-dark
+
+.slider 
+  margin: 0 56px 40px
+  &__wrap 
+    position: relative
+  &__prev, &__next 
+    position: absolute
+    top: 50%
+    transform: translate(0, -50%)
+    @media (min-width: 992px)
+      &:hover 
+        cursor: pointer 
+        filter: contrast(200)
+  &__prev 
+    left: 0
+  &__next 
+    right: 0
+    transform: rotate(180deg) translate(0, 50%)
+  &__item 
+    min-height: 110px !important
+    display: flex !important
+    align-items: center
+    justify-content: center
+    filter: grayscale(100%)
+    opacity: 0.5
+    @media (min-width: 992px)
+      &:hover
+        // cursor: pointer
+        filter: grayscale(0)
+        opacity: 1
+
+.slick-track
+  display: flex !important
+  // align-items: center
+
+#map 
+  width: 100%
+  height: 585px
+
+#develop 
+  .section__text 
+    margin-bottom: 60px
+
+.info
+  &-tab
+    font-size: 18px
+    &:not(:last-child)
+      margin-right: 12px  
+    input 
+      display: none
+      &.active
+        + label 
+          color: $text-color-dark
+          background-color: $active-color
+    label   
+      color: $active-color
+      background-color: $bg-color-dark
+    &s 
+      display: flex
+    &__content 
+      padding-top: 35px
+      display: none
+      &.active 
+        display: block
+      .btn 
+        margin: 30px auto 0
+        width: 160px
+  &-table 
+    font-family: $FontLight
+    margin-right: -15px
+    width: 100%
+    &__title
+      padding: 15px
+      font-weight: 300
+      font-size: 14px
+      text-align: left
+    &__item 
+      td 
+        padding: 10px 15px
+    &__link 
+      color: $active-color
+      @media (min-width: 992px)
+        &:hover
+          text-decoration: none
+
+@keyframes bg-slider
+  0%
+    transform:scale(1)
+  100%
+    transform: scale(1.1)
+
+@import "footer"
