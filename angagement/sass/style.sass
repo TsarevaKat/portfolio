@@ -42,6 +42,7 @@ button, input
   column-count: 2
   &__item
     display: block
+    margin-bottom: 10px
     color: $active-color
     text-decoration: none
     font-size: 50px
@@ -51,7 +52,9 @@ button, input
         color: $text-color-dark
         // text-decoration: underline
   @media (max-width: 767px) 
-    column-count: 1
+    column-count: 1 
+    &__item 
+      font-size: 42px
 .logo
   z-index: 11
   @media (max-width: 1370px)
